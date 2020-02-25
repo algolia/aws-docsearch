@@ -1,23 +1,22 @@
 module.exports = {
   title: "AWS S3 Doc",
   tagline: "AWS S3 made simple with Docusaurus and DocSearch.",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://aws-doc.algolia.com",
   baseUrl: "/",
   favicon: "img/favicon.ico",
   organizationName: "algolia", // Usually your GitHub org/user name.
   projectName: "aws-docsearch", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: "AWS S3 Doc",
+      title: "S3 Doc",
       logo: {
         alt: "AWS S3 Doc Logo",
         src: "img/logo.svg"
       },
       links: [
-        { to: "docs/index", label: "Docs", position: "left" },
-        { to: "blog", label: "Blog", position: "left" },
+        { to: "docs/Welcome", label: "Docs", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/algolia/aws-docsearch",
           label: "GitHub",
           position: "right"
         }
@@ -30,8 +29,8 @@ module.exports = {
           title: "Docs",
           items: [
             {
-              label: "Index",
-              to: "docs/index"
+              label: "Welcome",
+              to: "docs/Welcome"
             }
           ]
         },
@@ -40,28 +39,28 @@ module.exports = {
           items: [
             {
               label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus"
+              href: "https://stackoverflow.com/questions/tagged/docsearch"
             },
             {
               label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus"
-            }
+              href: "https://discord.gg/tXdr5mP"
+            },
+            {
+              label: "Apply",
+              href: "https://docsearch.algolia.com/apply"
+            },
           ]
         },
         {
           title: "Social",
           items: [
             {
-              label: "Blog",
-              to: "blog"
-            },
-            {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus"
+              href: "https://github.com/algolia/aws-docsearch"
             },
             {
               label: "Twitter",
-              href: "https://twitter.com/docusaurus"
+              href: "https://twitter.com/docsearch_"
             }
           ]
         }
@@ -75,7 +74,8 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/facebook/docusaurus/edit/master/website/"
+          editUrl:
+            "https://github.com/algolia/aws-docsearch/edit/master/website/"
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css")
@@ -84,5 +84,3 @@ module.exports = {
     ]
   ]
 };
-console.log("SIDEBAR")
-console.log(require.resolve("./sidebars.js"))
