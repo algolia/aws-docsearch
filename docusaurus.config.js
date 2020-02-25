@@ -48,7 +48,7 @@ module.exports = {
             {
               label: "Apply",
               href: "https://docsearch.algolia.com/apply"
-            },
+            }
           ]
         },
         {
@@ -65,7 +65,11 @@ module.exports = {
           ]
         }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`
+      copyright: `Copyright © ${new Date().getFullYear()}. Built with Docusaurus.`
+    },
+    algolia: {
+      apiKey: "a5a75e941cb6f706447f1cc686d7c3d5",
+      indexName: "aws-docsearch"
     }
   },
   presets: [
