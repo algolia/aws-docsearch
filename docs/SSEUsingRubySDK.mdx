@@ -19,7 +19,7 @@ obj = s3.bucket(bucketName).object(key)
 obj.upload_file(filePath, :server_side_encryption => encryptionType)
 ```
 
-For an example that shows how to upload an object without SSE, see [Upload an Object Using the AWS SDK for Ruby](UploadObjSingleOpRuby.md)\.
+For an example that shows how to upload an object without SSE, see [Upload an Object Using the AWS SDK for Ruby](UploadObjSingleOpRuby.mdx)\.
 
 ## Determining the Encryption Algorithm Used<a name="DeterminingEncryptionAlgorithmUsed03"></a>
 
@@ -60,4 +60,4 @@ obj2 = bucket2.object('Bucket2Key')
 obj1.copy_to(obj2, :server_side_encryption => encryptionType)
 ```
 
-For a sample of how to copy an object without encryption, see [Copy an Object Using the AWS SDK for Ruby](CopyingObjectUsingRuby.md)\. 
+For a sample of how to copy an object without encryption, see [Copy an Object Using the AWS SDK for Ruby](CopyingObjectUsingRuby.mdx)\. 

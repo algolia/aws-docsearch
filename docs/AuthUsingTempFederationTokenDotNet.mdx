@@ -1,12 +1,12 @@
 # Making Requests Using Federated User Temporary Credentials \- AWS SDK for \.NET<a name="AuthUsingTempFederationTokenDotNet"></a>
 
-You can provide temporary security credentials for your federated users and applications so that they can send authenticated requests to access your AWS resources\. When requesting these temporary credentials, you must provide a user name and an IAM policy that describes the resource permissions that you want to grant\. By default, the duration of a session is one hour\. You can explicitly set a different duration value when requesting the temporary security credentials for federated users and applications\. For information about sending authenticated requests, see [Making Requests](MakingRequests.md)\.
+You can provide temporary security credentials for your federated users and applications so that they can send authenticated requests to access your AWS resources\. When requesting these temporary credentials, you must provide a user name and an IAM policy that describes the resource permissions that you want to grant\. By default, the duration of a session is one hour\. You can explicitly set a different duration value when requesting the temporary security credentials for federated users and applications\. For information about sending authenticated requests, see [Making Requests](MakingRequests.mdx)\.
 
 **Note**  
 When requesting temporary security credentials for federated users and applications, for added security, we suggest that you use a dedicated IAM user with only the necessary access permissions\. The temporary user you create can never get more permissions than the IAM user who requested the temporary security credentials\. For more information, see [ AWS Identity and Access Management FAQs ](https://aws.amazon.com/iam/faqs/#What_are_the_best_practices_for_using_temporary_security_credentials)\.
 
 You do the following:
-+ Create an instance of the AWS Security Token Service client, `AmazonSecurityTokenServiceClient` class\. For information about providing credentials, see [Using the AWS SDK for \.NET](UsingTheMPDotNetAPI.md)\.
++ Create an instance of the AWS Security Token Service client, `AmazonSecurityTokenServiceClient` class\. For information about providing credentials, see [Using the AWS SDK for \.NET](UsingTheMPDotNetAPI.mdx)\.
 + Start a session by calling the `GetFederationToken` method of the STS client\. You need to provide session information, including the user name and an IAM policy that you want to attach to the temporary credentials\. Optionally, you can provide a session duration\. This method returns your temporary security credentials\.
 + Package the temporary security credentials in an instance of the `SessionAWSCredentials` object\. You use this object to provide the temporary security credentials to your Amazon S3 client\.
 + Create an instance of the `AmazonS3Client` class by passing the temporary security credentials\. You use this client to send requests to Amazon S3\. If you send requests using expired credentials, Amazon S3 returns an error\. 
@@ -46,7 +46,7 @@ The following C\# example lists the keys in the specified bucket\. In the exampl
 +   
 **Example**  
 
-  Update the following sample and provide the bucket name that you specified in the preceding federated user access policy\. For instructions on how to create and test a working example, see [Running the Amazon S3 \.NET Code Examples](UsingTheMPDotNetAPI.md#TestingDotNetApiSamples)\.
+  Update the following sample and provide the bucket name that you specified in the preceding federated user access policy\. For instructions on how to create and test a working example, see [Running the Amazon S3 \.NET Code Examples](UsingTheMPDotNetAPI.mdx#TestingDotNetApiSamples)\.
 
   ```
   using Amazon.Runtime;
@@ -145,4 +145,4 @@ The following C\# example lists the keys in the specified bucket\. In the exampl
   ```
 
 ## Related Resources<a name="RelatedResources006"></a>
-+ [Using the AWS SDKs, CLI, and Explorers](UsingAWSSDK.md)
++ [Using the AWS SDKs, CLI, and Explorers](UsingAWSSDK.mdx)

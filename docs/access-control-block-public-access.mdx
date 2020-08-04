@@ -13,7 +13,7 @@ When Amazon S3 evaluates whether an operation is prohibited by a block public ac
 
 |  | 
 | --- |
-|    Public access is granted to buckets and objects through access control lists \(ACLs\), access point policies, bucket policies, or all\. To help ensure that all of your Amazon S3 access points, buckets, and objects have their public access blocked, we recommend that you turn on all four settings for block public access for your account\. These settings block public access for all current and future buckets and access points\.  Before applying these settings, verify that your applications will work correctly without public access\. If you require some level of public access to your buckets or objects, for example to host a static website as described at [Hosting a Static Website on Amazon S3](WebsiteHosting.md), you can customize the individual settings to suit your storage use cases\.   | 
+|    Public access is granted to buckets and objects through access control lists \(ACLs\), access point policies, bucket policies, or all\. To help ensure that all of your Amazon S3 access points, buckets, and objects have their public access blocked, we recommend that you turn on all four settings for block public access for your account\. These settings block public access for all current and future buckets and access points\.  Before applying these settings, verify that your applications will work correctly without public access\. If you require some level of public access to your buckets or objects, for example to host a static website as described at [Hosting a Static Website on Amazon S3](WebsiteHosting.mdx), you can customize the individual settings to suit your storage use cases\.   | 
 
 **Note**  
 You can enable block public access settings only for access points, buckets, and AWS accounts\. Amazon S3 doesn't support block public access settings on a per\-object basis\.
@@ -55,7 +55,7 @@ Block public access settings don't alter existing policies or ACLs\. Therefore, 
 
 ### Buckets<a name="access-control-block-public-access-policy-status-buckets"></a>
 + **ACLs**
-  + Amazon S3 considers a bucket or object ACL public if it grants any permissions to members of the predefined `AllUsers` or `AuthenticatedUsers` groups\. For more information about predefined groups, see [Amazon S3 Predefined Groups](acl-overview.md#specifying-grantee-predefined-groups)\.
+  + Amazon S3 considers a bucket or object ACL public if it grants any permissions to members of the predefined `AllUsers` or `AuthenticatedUsers` groups\. For more information about predefined groups, see [Amazon S3 Predefined Groups](acl-overview.mdx#specifying-grantee-predefined-groups)\.
 + **Policies**
   + When evaluating a bucket policy, Amazon S3 begins by assuming that the policy is public\. It then evaluates the policy to determine whether it qualifies as non\-public\. To be considered non\-public, a bucket policy must grant access only to fixed values \(values that don't contain a wildcard\) of one or more of the following:
     + A set of Classless Inter\-Domain Routings \(CIDRs\), using `aws:SourceIp`\. For more information about CIDR, see [RFC 4632](http://www.rfc-editor.org/rfc/rfc4632.txt) on the RFC Editor website\.
@@ -112,7 +112,7 @@ When used in a bucket policy, this value can contain a wildcard for the access p
     		"Condition": {"StringEquals": {"aws:SourceVpc": "vpc-91237329"}}
     	}
     ```
-  + For more information about bucket policies, see [Using Bucket Policies and User Policies](using-iam-policies.md)\.
+  + For more information about bucket policies, see [Using Bucket Policies and User Policies](using-iam-policies.mdx)\.
 
 #### Example<a name="access-control-block-public-access-policy-example"></a>
 
@@ -186,7 +186,7 @@ You can use Amazon S3 Block Public Access through the AWS CLI\. The command you 
 
 ### Using Block Public Access with the AWS SDK for Java<a name="access-control-block-public-access-examples-java"></a>
 
-The following examples show how to use Amazon S3 Block Public Access with the AWS SDK for Java\. For instructions on how to create and test a working sample, see [Using the AWS SDK for Java](UsingTheMPJavaAPI.md)\.
+The following examples show how to use Amazon S3 Block Public Access with the AWS SDK for Java\. For instructions on how to create and test a working sample, see [Using the AWS SDK for Java](UsingTheMPJavaAPI.mdx)\.
 
 #### Example 1<a name="access-control-block-public-access-examples-java-1"></a>
 
@@ -233,7 +233,7 @@ This example pertains only to account\-level operations, which use the `AWSS3Con
 
 ### Using Block Public Access with Other AWS SDKs<a name="access-control-block-public-access-examples-other-sdk"></a>
 
-For information about using the other AWS SDKs, see [Using the AWS SDKs, CLI, and Explorers](UsingAWSSDK.md)\.
+For information about using the other AWS SDKs, see [Using the AWS SDKs, CLI, and Explorers](UsingAWSSDK.mdx)\.
 
 ### Using Block Public Access with the REST APIs<a name="access-control-block-public-access-examples-api"></a>
 

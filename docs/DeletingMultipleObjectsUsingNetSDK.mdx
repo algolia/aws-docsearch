@@ -4,7 +4,7 @@ The AWS SDK for \.NET provides a convenient method for deleting multiple objects
 
 **Example Deleting Multiple Objects from a Non\-Versioning Bucket**  
 The following C\# example uses the multi\-object delete API to delete objects from a bucket that is not version\-enabled\. The example uploads the sample objects to the bucket, and then uses the `DeleteObjects` method to delete the objects in a single request\. In the `DeleteObjectsRequest`, the example specifies only the object key names because the version IDs are null\.  
-For information about creating and testing a working sample, see [Running the Amazon S3 \.NET Code Examples](UsingTheMPDotNetAPI.md#TestingDotNetApiSamples)\.  
+For information about creating and testing a working sample, see [Running the Amazon S3 \.NET Code Examples](UsingTheMPDotNetAPI.mdx#TestingDotNetApiSamples)\.  
 
 ```
 using Amazon.S3;
@@ -104,7 +104,7 @@ The following C\# example uses the multi\-object delete API to delete objects fr
 1. Creates sample objects and deletes them by specifying only the key names\. Because the example doesn't specify version IDs, the operation only adds delete markers\. It doesn't delete any specific versions of the objects\. After deletion, these objects don't appear in the Amazon S3 console\.
 
 1. Deletes the delete markers by specifying the object keys and version IDs of the delete markers\. When the operation deletes the delete markers, the objects reappear in the console\.
-For information about creating and testing a working sample, see [Running the Amazon S3 \.NET Code Examples](UsingTheMPDotNetAPI.md#TestingDotNetApiSamples)\.  
+For information about creating and testing a working sample, see [Running the Amazon S3 \.NET Code Examples](UsingTheMPDotNetAPI.mdx#TestingDotNetApiSamples)\.  
 
 ```
 using Amazon.S3;

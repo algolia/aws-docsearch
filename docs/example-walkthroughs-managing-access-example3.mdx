@@ -9,7 +9,7 @@
 
 The scenario for this example is that a bucket owner wants to grant permission to access objects, but not all objects in the bucket are owned by the bucket owner\. How can a bucket owner grant permission on objects it does not own? For this example, the bucket owner is trying to grant permission to users in its own account\.
 
-A bucket owner can enable other AWS accounts to upload objects\. These objects are owned by the accounts that created them\. The bucket owner does not own objects that were not created by the bucket owner\. Therefore, for the bucket owner to grant access to these objects, the object owner must first grant permission to the bucket owner using an object ACL\. For more information, see [Amazon S3 Bucket and Object Ownership](access-control-overview.md#about-resource-owner)\.
+A bucket owner can enable other AWS accounts to upload objects\. These objects are owned by the accounts that created them\. The bucket owner does not own objects that were not created by the bucket owner\. Therefore, for the bucket owner to grant access to these objects, the object owner must first grant permission to the bucket owner using an object ACL\. For more information, see [Amazon S3 Bucket and Object Ownership](access-control-overview.mdx#about-resource-owner)\.
 
 In this example, the bucket owner delegates permission to users in its own account\. The following is a summary of the walkthrough steps:
 
@@ -25,7 +25,7 @@ In this example, the bucket owner delegates permission to users in its own accou
 
 1. User in Account A verifies by accessing objects in the bucket, regardless of who owns them\.
 
-For this example, you need two accounts\. The following table shows how we refer to these accounts and the administrator users in these accounts\. Per IAM guidelines \(see [About Using an Administrator User to Create Resources and Grant Permissions](example-walkthroughs-managing-access.md#about-using-root-credentials)\) we do not use the account root credentials in this walkthrough\. Instead, you create an administrator user in each account and use those credentials in creating resources and granting them permissions\.
+For this example, you need two accounts\. The following table shows how we refer to these accounts and the administrator users in these accounts\. Per IAM guidelines \(see [About Using an Administrator User to Create Resources and Grant Permissions](example-walkthroughs-managing-access.mdx#about-using-root-credentials)\) we do not use the account root credentials in this walkthrough\. Instead, you create an administrator user in each account and use those credentials in creating resources and granting them permissions\.
 
 
 | AWS Account ID | Account Referred To As | Administrator User in the Account  | 
@@ -56,7 +56,7 @@ All the tasks of creating users and granting permissions are done in the AWS Man
    + If using the AWS CLI, create two profiles, AccountAadmin and AccountBadmin, in the config file\.
    + If using the AWS Tools for Windows PowerShell, make sure you store credentials for the session as AccountAadmin and AccountBadmin\.
 
-   For instructions, see [Setting Up the Tools for the Example Walkthroughs](policy-eval-walkthrough-download-awscli.md)\. 
+   For instructions, see [Setting Up the Tools for the Example Walkthroughs](policy-eval-walkthrough-download-awscli.mdx)\. 
 
 ## Step 1: Do the Account A Tasks<a name="access-policies-walkthrough-cross-account-acl-acctA-tasks"></a>
 
@@ -156,7 +156,7 @@ Now verify user Dave in Account A can access the object owned by Account B\.
 
 **Using the AWS CLI**
 
-1. Add user Dave credentials to the AWS CLI config file and create a new profile, `UserDaveAccountA`\. For more information, see [Setting Up the Tools for the Example Walkthroughs](policy-eval-walkthrough-download-awscli.md)\.
+1. Add user Dave credentials to the AWS CLI config file and create a new profile, `UserDaveAccountA`\. For more information, see [Setting Up the Tools for the Example Walkthroughs](policy-eval-walkthrough-download-awscli.mdx)\.
 
    ```
    [profile UserDaveAccountA]

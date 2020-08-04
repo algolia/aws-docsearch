@@ -364,7 +364,7 @@ The policy is fine, but if there is an object with both tags, then S3 has to dec
 
 ## Example 6: Specifying a Lifecycle Rule for a Versioning\-Enabled Bucket<a name="lifecycle-config-conceptual-ex6"></a>
 
-Suppose that you have a versioning\-enabled bucket, which means that for each object you have a current version and zero or more noncurrent versions\. You want to maintain one year's worth of history and then delete the noncurrent versions\. For more information about versioning, see [Object Versioning](ObjectVersioning.md)\. 
+Suppose that you have a versioning\-enabled bucket, which means that for each object you have a current version and zero or more noncurrent versions\. You want to maintain one year's worth of history and then delete the noncurrent versions\. For more information about versioning, see [Object Versioning](ObjectVersioning.mdx)\. 
 
 Also, you want to save storage costs by moving noncurrent versions to GLACIER 30 days after they become noncurrent \(assuming cold data for which you don't need real\-time access\)\. In addition, you also expect frequency of access of the current versions to diminish 90 days after creation so you might choose to move these objects to the STANDARD\_IA storage class\.
 
@@ -434,7 +434,7 @@ For current object versions, you have the following options to manage their life
   </LifecycleConfiguration>
   ```
 
-  Amazon S3 removes current versions 60 days after they are created by adding a delete marker for each of the current object versions\. This makes the current version noncurrent and the delete marker becomes the current version\. For more information, see [Using Versioning](Versioning.md)\. 
+  Amazon S3 removes current versions 60 days after they are created by adding a delete marker for each of the current object versions\. This makes the current version noncurrent and the delete marker becomes the current version\. For more information, see [Using Versioning](Versioning.mdx)\. 
 
   The `NoncurrentVersionExpiration` action in the same lifecycle configuration removes noncurrent objects 30 days after they become noncurrent\. Thus, all object versions are permanently removed after 90 days from object creation and you have expired object delete markers, but Amazon S3 detects and removes the expired object delete markers for you\. 
 + **Current object versions don't have a well\-defined lifecycle\.** 
@@ -468,7 +468,7 @@ When specifying the `ExpiredObjectDeleteMarker` lifecycle action, the rule canno
 
 ## Example 8: Lifecycle Configuration to Abort Multipart Uploads<a name="lc-expire-mpu"></a>
 
-You can use the multipart upload API to upload large objects in parts\. For more information about multipart uploads, see [Multipart Upload Overview](mpuoverview.md)\. 
+You can use the multipart upload API to upload large objects in parts\. For more information about multipart uploads, see [Multipart Upload Overview](mpuoverview.mdx)\. 
 
 Using lifecycle configuration, you can direct Amazon S3 to abort incomplete multipart uploads \(identified by the key name prefix specified in the rule\) if they don't complete within a specified number of days after initiation\. When Amazon S3 aborts a multipart upload, it deletes all parts associated with the multipart upload\. This ensures that you don't have incomplete multipart uploads with parts that are stored in Amazon S3 and, therefore, you don't have to pay any storage costs for these parts\. 
 

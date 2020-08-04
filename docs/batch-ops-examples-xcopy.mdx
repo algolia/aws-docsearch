@@ -8,7 +8,7 @@ You can use Amazon S3 batch operations to create a PUT copy job to copy objects 
 
 ## Using an Inventory Report Delivered to the Destination AWS Account<a name="specify-batchjob-manifest-xaccount-inventory"></a>
 
-The Amazon S3 inventory generates inventories of the objects in a bucket\. The resulting list is published to an output file\. The bucket that is inventoried is called the *source bucket*, and the bucket where the inventory report file is stored is called the *destination bucket*\. The Amazon S3 inventory report can be configured to deliver the inventory report to another AWS account\. This allows Amazon S3 batch operations to read the inventory report when the job is created in the destination AWS account\. For more information about Amazon S3 inventory source and destination buckets, see [How Do I Set Up Amazon S3 Inventory?](storage-inventory.md#storage-inventory-how-to-set-up)\. 
+The Amazon S3 inventory generates inventories of the objects in a bucket\. The resulting list is published to an output file\. The bucket that is inventoried is called the *source bucket*, and the bucket where the inventory report file is stored is called the *destination bucket*\. The Amazon S3 inventory report can be configured to deliver the inventory report to another AWS account\. This allows Amazon S3 batch operations to read the inventory report when the job is created in the destination AWS account\. For more information about Amazon S3 inventory source and destination buckets, see [How Do I Set Up Amazon S3 Inventory?](storage-inventory.mdx#storage-inventory-how-to-set-up)\. 
 
 The easiest way to set up an inventory is by using the AWS Management Console, but you can also use the REST API, AWS CLI, or AWS SDKs\.
 
@@ -40,7 +40,7 @@ In the following console procedure, you set up permissions for an Amazon S3 batc
 
 1. In the destination account, add the copied bucket policy to the destination manifest bucket where the inventory report is stored\.
 
-1. Create a role in the destination account that is based on the Amazon S3 batch operations trust policy\. For more information about the trust policy, see [Trust Policy](batch-ops-iam-role-policies.md#batch-ops-iam-role-policies-trust)\. For more information about creating a role, see [ Creating a Role to Delegate Permissions to an AWS Service ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *IAM User Guide*\.
+1. Create a role in the destination account that is based on the Amazon S3 batch operations trust policy\. For more information about the trust policy, see [Trust Policy](batch-ops-iam-role-policies.mdx#batch-ops-iam-role-policies-trust)\. For more information about creating a role, see [ Creating a Role to Delegate Permissions to an AWS Service ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *IAM User Guide*\.
 
    Enter a name for the role \(the example role uses the name `BatchOperationsDestinationRoleCOPY`\)\. Choose the **S3** service, and then choose the **S3 bucket Batch Operations** use case, which applies the trust policy to the role\. 
 
@@ -108,7 +108,7 @@ In the following console procedure, you set up permissions for an Amazon S3 batc
 
 1. After the inventory report is available, create an Amazon S3 batch operations PUT object copy job in the destination account, choosing the inventory report from the destination manifest bucket\. You need the ARN for the role that you created in the destination account\. 
 
-   For general information about creating a job, see [Creating an Amazon S3 Batch Operations Job](batch-ops-create-job.md)\. For information about creating a job using the console, see [ Creating an Amazon S3 Batch Operations Job](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/batch-ops-create-job.html) in the *Amazon Simple Storage Service Console User Guide*\. 
+   For general information about creating a job, see [Creating an Amazon S3 Batch Operations Job](batch-ops-create-job.mdx)\. For information about creating a job using the console, see [ Creating an Amazon S3 Batch Operations Job](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/batch-ops-create-job.html) in the *Amazon Simple Storage Service Console User Guide*\. 
 
 ## Using a CSV Manifest Stored in the Source AWS Account<a name="specify-batchjob-manifest-xaccount-csv"></a>
 
@@ -120,7 +120,7 @@ The following procedure shows how to set up permissions when using an Amazon S3 
 
 1. Create a role in the destination account that is based on the Amazon S3 batch operations trust policy\. In this procedure, the *destination account* is the account that the objects are being copied to\. 
 
-   For more information about the trust policy, see [Trust Policy](batch-ops-iam-role-policies.md#batch-ops-iam-role-policies-trust)\. For more information about creating a role, see [Creating a Role to Delegate Permissions to an AWS Service ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *IAM User Guide*\.
+   For more information about the trust policy, see [Trust Policy](batch-ops-iam-role-policies.mdx#batch-ops-iam-role-policies-trust)\. For more information about creating a role, see [Creating a Role to Delegate Permissions to an AWS Service ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html) in the *IAM User Guide*\.
 
    If you create the role using the console, enter a name for the role \(the example role uses the name `BatchOperationsDestinationRoleCOPY`\)\. Choose the **S3** service, and then choose the **S3 bucket Batch Operations** use case, which applies the trust policy to the role\. Then choose **Create policy** to attach the following policy to the role\.
 
@@ -215,4 +215,4 @@ The following procedure shows how to set up permissions when using an Amazon S3 
 
 1. Create an Amazon S3 batch operations job in the destination account\. You need the ARN for the role that you created in the destination account\. 
 
-   For general information about creating a job, see [Creating an Amazon S3 Batch Operations Job](batch-ops-create-job.md)\. For information about creating a job using the console, see [ Creating an Amazon S3 Batch Operations Job](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/batch-ops-create-job.html) in the *Amazon Simple Storage Service Console User Guide*\. 
+   For general information about creating a job, see [Creating an Amazon S3 Batch Operations Job](batch-ops-create-job.mdx)\. For information about creating a job using the console, see [ Creating an Amazon S3 Batch Operations Job](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/batch-ops-create-job.html) in the *Amazon Simple Storage Service Console User Guide*\. 

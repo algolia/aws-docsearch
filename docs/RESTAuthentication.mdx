@@ -18,7 +18,7 @@ This topic explains authenticating requests using Signature Version 2\. Amazon S
  Authentication is the process of proving your identity to the system\. Identity is an important factor in Amazon S3 access control decisions\. Requests are allowed or denied in part based on the identity of the requester\. For example, the right to create buckets is reserved for registered developers and \(by default\) the right to create objects in a bucket is reserved for the owner of the bucket in question\. As a developer, you'll be making requests that invoke these privileges, so you'll need to prove your identity to the system by authenticating your requests\. This section shows you how\. 
 
 **Note**  
- The content in this section does not apply to HTTP POST\. For more information, see [Browser\-Based Uploads Using POST \(AWS Signature Version 2\)](UsingHTTPPOST.md)\. 
+ The content in this section does not apply to HTTP POST\. For more information, see [Browser\-Based Uploads Using POST \(AWS Signature Version 2\)](UsingHTTPPOST.mdx)\. 
 
  The Amazon S3 REST API uses a custom HTTP scheme based on a keyed\-HMAC \(Hash Message Authentication Code\) for authentication\. To authenticate a request, you first concatenate selected elements of the request to form a string\. You then use your AWS secret access key to calculate the HMAC of that string\. Informally, we call this process "signing the request," and we call the output of the HMAC algorithm the signature, because it simulates the security properties of a real signature\. Finally, you add this signature as a parameter of the request by using the syntax described in this section\. 
 
@@ -36,7 +36,7 @@ This topic explains authenticating requests using Signature Version 2\. Amazon S
 
 ## Using Temporary Security Credentials<a name="UsingTemporarySecurityCredentials"></a>
 
-If you are signing your request using temporary security credentials \(see [Making Requests](MakingRequests.md)\), you must include the corresponding security token in your request by adding the `x-amz-security-token` header\. 
+If you are signing your request using temporary security credentials \(see [Making Requests](MakingRequests.mdx)\), you must include the corresponding security token in your request by adding the `x-amz-security-token` header\. 
 
 When you obtain temporary security credentials using the AWS Security Token Service API, the response includes temporary security credentials and a session token\. You provide the session token value in the `x-amz-security-token` header when you send requests to Amazon S3\. For information about the AWS Security Token Service API provided by IAM, go to [Action](https://docs.aws.amazon.com/STS/latest/APIReference/API_Operations.html) in the *AWS Security Token Service API Reference Guide *\.
 
@@ -89,13 +89,13 @@ Following is pseudogrammar that illustrates the construction of the `Authorizati
 |  |  | 
 | --- |--- |
 |  1  |  Start with an empty string \(`""`\)\.  | 
-|  2  |  If the request specifies a bucket using the HTTP Host header \(virtual hosted\-style\), append the bucket name preceded by a `"/"` \(e\.g\., "/bucketname"\)\. For path\-style requests and requests that don't address a bucket, do nothing\. For more information about virtual hosted\-style requests, see [Virtual Hosting of Buckets](VirtualHosting.md)\.  For a virtual hosted\-style request "https://johnsmith\.s3\.us\-west\-1\.amazonaws\.com/photos/puppy\.jpg", the `CanonicalizedResource` is "/johnsmith"\.  For the path\-style request, "https://s3\.us\-west\-1\.amazonaws\.com/johnsmith/photos/puppy\.jpg", the `CanonicalizedResource` is ""\.  | 
+|  2  |  If the request specifies a bucket using the HTTP Host header \(virtual hosted\-style\), append the bucket name preceded by a `"/"` \(e\.g\., "/bucketname"\)\. For path\-style requests and requests that don't address a bucket, do nothing\. For more information about virtual hosted\-style requests, see [Virtual Hosting of Buckets](VirtualHosting.mdx)\.  For a virtual hosted\-style request "https://johnsmith\.s3\.us\-west\-1\.amazonaws\.com/photos/puppy\.jpg", the `CanonicalizedResource` is "/johnsmith"\.  For the path\-style request, "https://s3\.us\-west\-1\.amazonaws\.com/johnsmith/photos/puppy\.jpg", the `CanonicalizedResource` is ""\.  | 
 |  3  |  Append the path part of the un\-decoded HTTP Request\-URI, up\-to but not including the query string\. For a virtual hosted\-style request "https://johnsmith\.s3\.us\-west\-1\.amazonaws\.com/photos/puppy\.jpg", the `CanonicalizedResource` is "/johnsmith/photos/puppy\.jpg"\. For a path\-style request, "https://s3\.us\-west\-1\.amazonaws\.com/johnsmith/photos/puppy\.jpg", the `CanonicalizedResource` is "/johnsmith/photos/puppy\.jpg"\. At this point, the `CanonicalizedResource` is the same for both the virtual hosted\-style and path\-style request\. For a request that does not address a bucket, such as [GET Service](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTServiceGET.html), append "/"\.  | 
 |  4  |  If the request addresses a subresource, such as `?versioning`, `?location`, `?acl`, `?torrent`, `?lifecycle`, or `?versionid`, append the subresource, its value if it has one, and the question mark\. Note that in case of multiple subresources, subresources must be lexicographically sorted by subresource name and separated by '&', e\.g\., ?acl&versionId=*value*\.  The subresources that must be included when constructing the CanonicalizedResource Element are acl, lifecycle, location, logging, notification, partNumber, policy, requestPayment, torrent, uploadId, uploads, versionId, versioning, versions, and website\.  If the request specifies query string parameters overriding the response header values \(see [Get Object](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectGET.html)\), append the query string parameters and their values\. When signing, you do not encode these values; however, when making the request, you must encode these parameter values\. The query string parameters in a GET request include `response-content-type`, `response-content-language`, `response-expires`, `response-cache-control`, `response-content-disposition`, and `response-content-encoding`\. The `delete` query string parameter must be included when you create the CanonicalizedResource for a multi\-object Delete request\.  | 
 
 Elements of the CanonicalizedResource that come from the HTTP Request\-URI should be signed literally as they appear in the HTTP request, including URL\-Encoding meta characters\. 
 
-The `CanonicalizedResource` might be different than the HTTP Request\-URI\. In particular, if your request uses the HTTP `Host` header to specify a bucket, the bucket does not appear in the HTTP Request\-URI\. However, the `CanonicalizedResource` continues to include the bucket\. Query string parameters might also appear in the Request\-URI but are not included in `CanonicalizedResource`\. For more information, see [Virtual Hosting of Buckets](VirtualHosting.md)\. 
+The `CanonicalizedResource` might be different than the HTTP Request\-URI\. In particular, if your request uses the HTTP `Host` header to specify a bucket, the bucket does not appear in the HTTP Request\-URI\. However, the `CanonicalizedResource` continues to include the bucket\. Query string parameters might also appear in the Request\-URI but are not included in `CanonicalizedResource`\. For more information, see [Virtual Hosting of Buckets](VirtualHosting.mdx)\. 
 
 ## Constructing the CanonicalizedAmzHeaders Element<a name="RESTAuthenticationConstructingCanonicalizedAmzHeaders"></a>
 
@@ -238,7 +238,7 @@ Some toolkits silently insert headers that you do not know about beforehand, suc
 You can authenticate certain types of requests by passing the required information as query\-string parameters instead of using the `Authorization` HTTP header\. This is useful for enabling direct third\-party browser access to your private Amazon S3 data without proxying the request\. The idea is to construct a "presigned" request and encode it as a URL that an end\-user's browser can retrieve\. Additionally, you can limit a presigned request by specifying an expiration time\. 
 
 **Note**  
-For examples of using the AWS SDKs to generating presigned URLs, see [Share an Object with Others](ShareObjectPreSignedURL.md)\. 
+For examples of using the AWS SDKs to generating presigned URLs, see [Share an Object with Others](ShareObjectPreSignedURL.mdx)\. 
 
 ### Creating a Signature<a name="CreatingASignature"></a>
 

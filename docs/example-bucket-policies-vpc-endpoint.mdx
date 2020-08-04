@@ -20,7 +20,7 @@ When applying the Amazon S3 bucket policies for VPC endpoints described in this 
 
 ## Restricting Access to a Specific VPC Endpoint<a name="example-bucket-policies-restrict-accesss-vpc-endpoint"></a>
 
-The following is an example of an Amazon S3 bucket policy that restricts access to a specific bucket, `examplebucket`, only from the VPC endpoint with the ID `vpce-1a2b3c4d`\. The policy denies all access to the bucket if the specified endpoint is not being used\. The `aws:sourceVpce` condition is used to specify the endpoint\. The `aws:sourceVpce` condition does not require an Amazon Resource Name \(ARN\) for the VPC endpoint resource, only the VPC endpoint ID\. For more information about using conditions in a policy, see [Specifying Conditions in a Policy](amazon-s3-policy-keys.md)\.
+The following is an example of an Amazon S3 bucket policy that restricts access to a specific bucket, `examplebucket`, only from the VPC endpoint with the ID `vpce-1a2b3c4d`\. The policy denies all access to the bucket if the specified endpoint is not being used\. The `aws:sourceVpce` condition is used to specify the endpoint\. The `aws:sourceVpce` condition does not require an Amazon Resource Name \(ARN\) for the VPC endpoint resource, only the VPC endpoint ID\. For more information about using conditions in a policy, see [Specifying Conditions in a Policy](amazon-s3-policy-keys.mdx)\.
 
 ```
  1. {
@@ -71,5 +71,5 @@ You can create a bucket policy that restricts access to a specific VPC by using 
 ```
 
 ## Related Resources<a name="example-bucket-policies-restrict-access-vpc-related-resources"></a>
-+ [Bucket Policy Examples](example-bucket-policies.md)
++ [Bucket Policy Examples](example-bucket-policies.mdx)
 + [VPC Endpoints](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) in the *Amazon VPC User Guide*

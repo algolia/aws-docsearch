@@ -3,9 +3,9 @@
 **Topics**
 + [About Access Keys](#TypesofSecurityCredentials)
 + [Request Endpoints](#RequestEndpoints)
-+ [Making Requests to Amazon S3 over IPv6](ipv6-access.md)
-+ [Making Requests Using the AWS SDKs](MakingAuthenticatedRequests.md)
-+ [Making Requests Using the REST API](RESTAPI.md)
++ [Making Requests to Amazon S3 over IPv6](ipv6-access.mdx)
++ [Making Requests Using the AWS SDKs](MakingAuthenticatedRequests.mdx)
++ [Making Requests Using the REST API](RESTAPI.mdx)
 
 Amazon S3 is a REST service\. You can send requests to Amazon S3 using the REST API or the AWS SDK \(see [Sample Code and Libraries](https://aws.amazon.com/code)\) wrapper libraries that wrap the underlying Amazon S3 REST API, simplifying your programming tasks\. 
 
@@ -43,11 +43,11 @@ An IAM user can request these temporary security credentials for their own use o
 
 You can use these temporary security credentials in making requests to Amazon S3\. The API libraries compute the necessary signature value using those credentials to authenticate your request\. If you send requests using expired credentials, Amazon S3 denies the request\.
 
-For information on signing requests using temporary security credentials in your REST API requests, see [Signing and Authenticating REST Requests](RESTAuthentication.md)\. For information about sending requests using AWS SDKs, see [Making Requests Using the AWS SDKs](MakingAuthenticatedRequests.md)\. 
+For information on signing requests using temporary security credentials in your REST API requests, see [Signing and Authenticating REST Requests](RESTAuthentication.mdx)\. For information about sending requests using AWS SDKs, see [Making Requests Using the AWS SDKs](MakingAuthenticatedRequests.mdx)\. 
 
 For more information about IAM support for temporary security credentials, see [Temporary Security Credentials](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html) in the *IAM User Guide*\.
 
-For added security, you can require multifactor authentication \(MFA\) when accessing your Amazon S3 resources by configuring a bucket policy\. For information, see [Adding a Bucket Policy to Require MFA](example-bucket-policies.md#example-bucket-policies-use-case-7)\. After you require MFA to access your Amazon S3 resources, the only way you can access these resources is by providing temporary credentials that are created with an MFA key\. For more information, see the [AWS Multi\-Factor Authentication](https://aws.amazon.com/mfa/) detail page and [Configuring MFA\-Protected API Access](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_configure-api-require.html) in the *IAM User Guide*\.
+For added security, you can require multifactor authentication \(MFA\) when accessing your Amazon S3 resources by configuring a bucket policy\. For information, see [Adding a Bucket Policy to Require MFA](example-bucket-policies.mdx#example-bucket-policies-use-case-7)\. After you require MFA to access your Amazon S3 resources, the only way you can access these resources is by providing temporary credentials that are created with an MFA key\. For more information, see the [AWS Multi\-Factor Authentication](https://aws.amazon.com/mfa/) detail page and [Configuring MFA\-Protected API Access](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_configure-api-require.html) in the *IAM User Guide*\.
 
 ## Request Endpoints<a name="RequestEndpoints"></a>
 

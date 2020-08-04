@@ -1,8 +1,8 @@
 # Making Requests Using IAM User Temporary Credentials \- AWS SDK for Java<a name="AuthUsingTempSessionTokenJava"></a>
 
-An IAM user or an AWS Account can request temporary security credentials \(see [Making Requests](MakingRequests.md)\) using the AWS SDK for Java and use them to access Amazon S3\. These credentials expire after the specified session duration\. To use IAM temporary security credentials, do the following:
+An IAM user or an AWS Account can request temporary security credentials \(see [Making Requests](MakingRequests.mdx)\) using the AWS SDK for Java and use them to access Amazon S3\. These credentials expire after the specified session duration\. To use IAM temporary security credentials, do the following:
 
-1. Create an instance of the `AWSSecurityTokenService` class\. For information about providing credentials, see [Using the AWS SDKs, CLI, and Explorers](UsingAWSSDK.md)\.
+1. Create an instance of the `AWSSecurityTokenService` class\. For information about providing credentials, see [Using the AWS SDKs, CLI, and Explorers](UsingAWSSDK.mdx)\.
 
 1. Retrieve the temporary security credentials for the desired role by calling the `assumeRole()` method of the Security Token Service \(STS\) client\.
 
@@ -17,7 +17,7 @@ The following example lists a set of object keys in the specified bucket\. The e
 
 If you want to test the sample using IAM user credentials, you will need to create an IAM user under your AWS Account\. For more information about how to create an IAM user, see [Creating Your First IAM User and Administrators Group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) in the *IAM User Guide*\.
 
-For instructions on creating and testing a working sample, see [Testing the Amazon S3 Java Code Examples](UsingTheMPJavaAPI.md#TestingJavaSamples)\. 
+For instructions on creating and testing a working sample, see [Testing the Amazon S3 Java Code Examples](UsingTheMPJavaAPI.mdx#TestingJavaSamples)\. 
 
 ```
 import com.amazonaws.AmazonServiceException;
@@ -91,4 +91,4 @@ public class MakingRequestsWithIAMTempCredentials {
 ```
 
 ## Related Resources<a name="RelatedResources008"></a>
-+ [Using the AWS SDKs, CLI, and Explorers](UsingAWSSDK.md)
++ [Using the AWS SDKs, CLI, and Explorers](UsingAWSSDK.mdx)

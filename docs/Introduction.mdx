@@ -49,15 +49,15 @@ This section describes key concepts and terminology you need to understand to us
 + They play a role in access control\.
 + They serve as the unit of aggregation for usage reporting\.
 
-You can configure buckets so that they are created in a specific AWS Region\. For more information, see [Accessing a Bucket](UsingBucket.md#access-bucket-intro)\. You can also configure a bucket so that every time an object is added to it, Amazon S3 generates a unique version ID and assigns it to the object\. For more information, see [Using Versioning](Versioning.md)\.
+You can configure buckets so that they are created in a specific AWS Region\. For more information, see [Accessing a Bucket](UsingBucket.mdx#access-bucket-intro)\. You can also configure a bucket so that every time an object is added to it, Amazon S3 generates a unique version ID and assigns it to the object\. For more information, see [Using Versioning](Versioning.mdx)\.
 
- For more information about buckets, see [Working with Amazon S3 Buckets](UsingBucket.md)\. 
+ For more information about buckets, see [Working with Amazon S3 Buckets](UsingBucket.mdx)\. 
 
 ### Objects<a name="BasicsObjects"></a>
 
 Objects are the fundamental entities stored in Amazon S3\. Objects consist of object data and metadata\. The data portion is opaque to Amazon S3\. The metadata is a set of name\-value pairs that describe the object\. These include some default metadata, such as the date last modified, and standard HTTP metadata, such as `Content-Type`\. You can also specify custom metadata at the time the object is stored\.
 
-An object is uniquely identified within a bucket by a key \(name\) and a version ID\. For more information, see [Keys](#BasicsKeys) and [Using Versioning](Versioning.md)\.
+An object is uniquely identified within a bucket by a key \(name\) and a version ID\. For more information, see [Keys](#BasicsKeys) and [Using Versioning](Versioning.mdx)\.
 
 ### Keys<a name="BasicsKeys"></a>
 
@@ -137,7 +137,7 @@ This section describes important Amazon S3 features\.
 
  Amazon S3 offers a range of storage classes designed for different use cases\. These include Amazon S3 STANDARD for general\-purpose storage of frequently accessed data, Amazon S3 STANDARD\_IA for long\-lived, but less frequently accessed data, and GLACIER for long\-term archive\.
 
-For more information, see [Amazon S3 Storage Classes](storage-class-intro.md)\.
+For more information, see [Amazon S3 Storage Classes](storage-class-intro.mdx)\.
 
 ### Bucket Policies<a name="BucketPolicies"></a>
 
@@ -161,7 +161,7 @@ An account can control access based on specific Amazon S3 operations, such as `G
 
 The conditions can be such things as IP addresses, IP address ranges in CIDR notation, dates, user agents, HTTP referrer, and transports \(HTTP and HTTPS\)\. 
 
-For more information, see [Using Bucket Policies and User Policies](using-iam-policies.md)\.
+For more information, see [Using Bucket Policies and User Policies](using-iam-policies.mdx)\.
 
 ### AWS Identity and Access Management<a name="AWSIdentityandAccessManagement"></a>
 
@@ -176,11 +176,11 @@ For more information about IAM, see the following:
 
 ### Access Control Lists<a name="S3_ACLs"></a>
 
-You can control access to each of your buckets and objects using an access control list \(ACL\)\. For more information, see [Managing Access with ACLs](S3_ACLs_UsingACLs.md)\.
+You can control access to each of your buckets and objects using an access control list \(ACL\)\. For more information, see [Managing Access with ACLs](S3_ACLs_UsingACLs.mdx)\.
 
 ### Versioning<a name="Versions"></a>
 
-You can use *versioning* to keep multiple versions of an object in the same bucket\. For more information, see [Object Versioning](ObjectVersioning.md)\.
+You can use *versioning* to keep multiple versions of an object in the same bucket\. For more information, see [Object Versioning](ObjectVersioning.mdx)\.
 
 ### Operations<a name="BasicsOperations"></a>
 

@@ -1,6 +1,6 @@
 # Deleting or Emptying a Bucket<a name="delete-or-empty-bucket"></a>
 
-In some situations, you may need to delete or empty a bucket that contains objects\. In this section, we'll explain how to delete objects in an unversioned bucket, and how to delete object versions and delete markers in a bucket that has versioning enabled\. For more information about versioning, see [Using Versioning](Versioning.md)\. In some situations, you may choose to empty a bucket instead of deleting it\. This section explains various options you can use to delete or empty a bucket that contains objects\.
+In some situations, you may need to delete or empty a bucket that contains objects\. In this section, we'll explain how to delete objects in an unversioned bucket, and how to delete object versions and delete markers in a bucket that has versioning enabled\. For more information about versioning, see [Using Versioning](Versioning.mdx)\. In some situations, you may choose to empty a bucket instead of deleting it\. This section explains various options you can use to delete or empty a bucket that contains objects\.
 
 **Topics**
 + [Delete a Bucket](#delete-bucket)
@@ -40,7 +40,7 @@ The following Java example deletes a bucket that contains objects\. The example 
 **Note**  
 For buckets without versioning enabled, you can delete all objects directly and then delete the bucket\. For buckets with versioning enabled, you must delete all object versions before deleting the bucket\.
 
-For instructions on creating and testing a working sample, see [Testing the Amazon S3 Java Code Examples](UsingTheMPJavaAPI.md#TestingJavaSamples)\. 
+For instructions on creating and testing a working sample, see [Testing the Amazon S3 Java Code Examples](UsingTheMPJavaAPI.mdx#TestingJavaSamples)\. 
 
 ```
 import com.amazonaws.AmazonServiceException;
@@ -152,7 +152,7 @@ $ aws s3 rm s3://bucket-name --recursive
 For more information, see [Using High\-Level S3 Commands with the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/using-s3-commands.html) in the AWS Command Line Interface User Guide\.
 
 **Note**  
-You cannot remove objects from a bucket with versioning enabled\. Amazon S3 adds a delete marker when you delete an object, which is what this command will do\. For more information about versioning, see [Using Versioning](Versioning.md)\.
+You cannot remove objects from a bucket with versioning enabled\. Amazon S3 adds a delete marker when you delete an object, which is what this command will do\. For more information about versioning, see [Using Versioning](Versioning.mdx)\.
 
 ### Empty a Bucket: Using Lifecycle Configuration<a name="empty-bucket-lifecycle"></a>
 
@@ -160,7 +160,7 @@ You can configure lifecycle on your bucket to expire objects and request that Am
 
 If your bucket has versioning enabled, you can also configure the rule to expire noncurrent objects\. To fully empty the contents of a versioning enabled bucket, you will need to configure an expiration policy on both current and noncurrent objects in the bucket\.
 
-For more information, see [Object Lifecycle Management](object-lifecycle-mgmt.md) and [Understanding Object Expiration](lifecycle-expire-general-considerations.md)\.
+For more information, see [Object Lifecycle Management](object-lifecycle-mgmt.mdx) and [Understanding Object Expiration](lifecycle-expire-general-considerations.mdx)\.
 
 ### Empty a Bucket: Using the AWS SDKs<a name="empty-bucket-awssdks"></a>
 

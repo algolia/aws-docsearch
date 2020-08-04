@@ -6,7 +6,7 @@ You can provide temporary security credentials for your federated users and appl
 For added security when requesting temporary security credentials for federated users and applications, we recommend that you use a dedicated IAM user with only the necessary access permissions\. The temporary user you create can never get more permissions than the IAM user who requested the temporary security credentials\. For more information, see [ AWS Identity and Access Management FAQs ](https://aws.amazon.com/iam/faqs/#What_are_the_best_practices_for_using_temporary_security_credentials)\.
 
 To provide security credentials and send authenticated request to access resources, do the following:
-+ Create an instance of the `AWSSecurityTokenServiceClient` class\. For information about providing credentials, see [Using the AWS SDK for Java](UsingTheMPJavaAPI.md)\.
++ Create an instance of the `AWSSecurityTokenServiceClient` class\. For information about providing credentials, see [Using the AWS SDK for Java](UsingTheMPJavaAPI.mdx)\.
 + Start a session by calling the `getFederationToken()` method of the Security Token Service \(STS\) client\. Provide session information, including the user name and an IAM policy, that you want to attach to the temporary credentials\. You can provide an optional session duration\. This method returns your temporary security credentials\.
 + Package the temporary security credentials in an instance of the `BasicSessionCredentials` object\. You use this object to provide the temporary security credentials to your Amazon S3 client\.
 + Create an instance of the `AmazonS3Client` class using the temporary security credentials\. You send requests to Amazon S3 using this client\. If you send requests using expired credentials, Amazon S3 returns an error\. 
@@ -27,7 +27,7 @@ The example lists keys in the specified S3 bucket\. In the example, you obtain t
 10. }
 ```
 For more information about how to create an IAM user, see [Creating Your First IAM User and Administrators Group](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html) in the *IAM User Guide*\.   
-After creating an IAM user and attaching the preceding policy, you can run the following example\. For instructions on creating and testing a working sample, see [Testing the Amazon S3 Java Code Examples](UsingTheMPJavaAPI.md#TestingJavaSamples)\.  
+After creating an IAM user and attaching the preceding policy, you can run the following example\. For instructions on creating and testing a working sample, see [Testing the Amazon S3 Java Code Examples](UsingTheMPJavaAPI.mdx#TestingJavaSamples)\.  
 
 ```
 import com.amazonaws.AmazonServiceException;
@@ -111,4 +111,4 @@ public class MakingRequestsWithFederatedTempCredentials {
 ```
 
 ## Related Resources<a name="RelatedResources005"></a>
-+ [Using the AWS SDKs, CLI, and Explorers](UsingAWSSDK.md)
++ [Using the AWS SDKs, CLI, and Explorers](UsingAWSSDK.mdx)

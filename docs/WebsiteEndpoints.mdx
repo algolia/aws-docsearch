@@ -19,12 +19,12 @@ http://bucket-name.s3-website-Region.amazonaws.com
 
 For a complete list of Amazon S3 website endpoints, see [Amazon S3 Website Endpoints](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints)\.
 
-For your customers to access content at the website endpoint, you must make all your content publicly readable\. To do so, you can edit block public access settings for the account\. Then, you can use a bucket policy or an access control list \(ACL\) on an object to grant the necessary permissions\. For more information, see [Permissions Required for Website Access](WebsiteAccessPermissionsReqd.md)\.
+For your customers to access content at the website endpoint, you must make all your content publicly readable\. To do so, you can edit block public access settings for the account\. Then, you can use a bucket policy or an access control list \(ACL\) on an object to grant the necessary permissions\. For more information, see [Permissions Required for Website Access](WebsiteAccessPermissionsReqd.mdx)\.
 
 **Note**  
-Requester Pays buckets  do not allow access through the website endpoint\. Any request to such a bucket receives a `403 Access Denied` response\. For more information, see [Requester Pays Buckets](RequesterPaysBuckets.md)\.
+Requester Pays buckets  do not allow access through the website endpoint\. Any request to such a bucket receives a `403 Access Denied` response\. For more information, see [Requester Pays Buckets](RequesterPaysBuckets.mdx)\.
 
-If you have a registered domain, you can add a DNS CNAME entry to point to the Amazon S3 website endpoint\. For example, if you have registered domain, `www.example-bucket.com`, you could create a bucket `www.example-bucket.com`, and add a DNS CNAME record that points to `www.example-bucket.com.s3-website.Region.amazonaws.com`\. All requests to `http://www.example-bucket.com` are routed to `www.example-bucket.com.s3-website.Region.amazonaws.com`\. For more information, see [Virtual Hosting of Buckets](VirtualHosting.md)\. 
+If you have a registered domain, you can add a DNS CNAME entry to point to the Amazon S3 website endpoint\. For example, if you have registered domain, `www.example-bucket.com`, you could create a bucket `www.example-bucket.com`, and add a DNS CNAME record that points to `www.example-bucket.com.s3-website.Region.amazonaws.com`\. All requests to `http://www.example-bucket.com` are routed to `www.example-bucket.com.s3-website.Region.amazonaws.com`\. For more information, see [Virtual Hosting of Buckets](VirtualHosting.mdx)\. 
 
 ## Key Differences Between the Amazon Website and the REST API Endpoint<a name="WebsiteRestEndpointDiff"></a>
 
@@ -40,4 +40,4 @@ The website endpoint is optimized for access from a web browser\. The following 
 | Responses to GET and HEAD requests at the root of a bucket | Returns a list of the object keys in the bucket\. | Returns the index document that is specified in the website configuration\. | 
 | Secure Sockets Layer \(SSL\) support | Supports SSL connections\. | Does not support SSL connections\. | 
 
-For a list of the Amazon S3 endpoints, see [Request Endpoints](MakingRequests.md#RequestEndpoints)\.
+For a list of the Amazon S3 endpoints, see [Request Endpoints](MakingRequests.mdx#RequestEndpoints)\.

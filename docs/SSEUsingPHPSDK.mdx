@@ -1,8 +1,8 @@
 # Specifying Server\-Side Encryption Using the AWS SDK for PHP<a name="SSEUsingPHPSDK"></a>
 
-This topic shows how to use classes from version 3 of the AWS SDK for PHP to add server\-side encryption to objects that you upload to Amazon Simple Storage Service \(Amazon S3\)\. It assumes that you are already following the instructions for [Using the AWS SDK for PHP and Running PHP Examples](UsingTheMPphpAPI.md) and have the AWS SDK for PHP properly installed\.
+This topic shows how to use classes from version 3 of the AWS SDK for PHP to add server\-side encryption to objects that you upload to Amazon Simple Storage Service \(Amazon S3\)\. It assumes that you are already following the instructions for [Using the AWS SDK for PHP and Running PHP Examples](UsingTheMPphpAPI.mdx) and have the AWS SDK for PHP properly installed\.
 
-To upload an object to Amazon S3, use the [Aws\\S3\\S3Client::putObject\(\)](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#putobject) method\. To add the `x-amz-server-side-encryption` request header to your upload request, specify the `ServerSideEncryption` parameter with the value `AES256`, as shown in the following code example\. For information about server\-side encryption requests, see [Specifying Server\-Side Encryption Using the REST API](SSEUsingRESTAPI.md)\.
+To upload an object to Amazon S3, use the [Aws\\S3\\S3Client::putObject\(\)](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#putobject) method\. To add the `x-amz-server-side-encryption` request header to your upload request, specify the `ServerSideEncryption` parameter with the value `AES256`, as shown in the following code example\. For information about server\-side encryption requests, see [Specifying Server\-Side Encryption Using the REST API](SSEUsingRESTAPI.mdx)\.
 
 ```
  require 'vendor/autoload.php';
@@ -32,8 +32,8 @@ $result = $s3->putObject([
 In response, Amazon S3 returns the `x-amz-server-side-encryption` header with the value of the encryption algorithm that was used to encrypt your object's data\. 
 
 When you upload large objects using the multipart upload API, you can specify server\-side encryption for the objects that you are uploading, as follows: 
-+ When using the low\-level multipart upload API, specify server\-side encryption when you call the [ Aws\\S3\\S3Client::createMultipartUpload\(\)](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#createmultipartupload) method\. To add the `x-amz-server-side-encryption` request header to your request, specify the `array` parameter's `ServerSideEncryption` key with the value `AES256`\. For more information about the low\-level multipart upload API, see [Using the AWS PHP SDK for Multipart Upload \(Low\-Level API\)](usingLLmpuPHP.md)\.
-+ When using the high\-level multipart upload API, specify server\-side encryption using the `ServerSideEncryption` parameter of the [CreateMultipartUpload](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#createmultipartupload) method\. For an example of using the `setOption()` method with the high\-level multipart upload API, see [Using the AWS PHP SDK for Multipart Upload](usingHLmpuPHP.md)\.
++ When using the low\-level multipart upload API, specify server\-side encryption when you call the [ Aws\\S3\\S3Client::createMultipartUpload\(\)](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#createmultipartupload) method\. To add the `x-amz-server-side-encryption` request header to your request, specify the `array` parameter's `ServerSideEncryption` key with the value `AES256`\. For more information about the low\-level multipart upload API, see [Using the AWS PHP SDK for Multipart Upload \(Low\-Level API\)](usingLLmpuPHP.mdx)\.
++ When using the high\-level multipart upload API, specify server\-side encryption using the `ServerSideEncryption` parameter of the [CreateMultipartUpload](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#createmultipartupload) method\. For an example of using the `setOption()` method with the high\-level multipart upload API, see [Using the AWS PHP SDK for Multipart Upload](usingHLmpuPHP.mdx)\.
 
 ## Determining Encryption Algorithm Used<a name="DeterminingEncryptionAlgorithmUsed04"></a>
 

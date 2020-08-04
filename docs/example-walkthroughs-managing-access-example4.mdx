@@ -13,7 +13,7 @@
 
 Now, suppose as a bucket owner, you need to grant cross\-account permission on objects, regardless of who the owner is, to a user in another account\. For example, that user could be a billing application that needs to access object metadata\. There are two core issues:
 + The bucket owner has no permissions on those objects created by other AWS accounts\. So for the bucket owner to grant permissions on objects it does not own, the object owner, the AWS account that created the objects, must first grant permission to the bucket owner\. The bucket owner can then delegate those permissions\.
-+ Bucket owner account can delegate permissions to users in its own account \(see [Example 3: Bucket Owner Granting Its Users Permissions to Objects It Does Not Own ](example-walkthroughs-managing-access-example3.md)\), but it cannot delegate permissions to other AWS accounts, because cross\-account delegation is not supported\. 
++ Bucket owner account can delegate permissions to users in its own account \(see [Example 3: Bucket Owner Granting Its Users Permissions to Objects It Does Not Own ](example-walkthroughs-managing-access-example3.mdx)\), but it cannot delegate permissions to other AWS accounts, because cross\-account delegation is not supported\. 
 
 In this scenario, the bucket owner can create an AWS Identity and Access Management \(IAM\) role with permission to access objects, and grant another AWS account permission to assume the role temporarily enabling it to access objects in the bucket\. 
 
@@ -21,7 +21,7 @@ In this scenario, the bucket owner can create an AWS Identity and Access Managem
 
  IAM roles enable several scenarios to delegate access to your resources, and cross\-account access is one of the key scenarios\. In this example, the bucket owner, Account A, uses an IAM role to temporarily delegate object access cross\-account to users in another AWS account, Account C\. Each IAM role you create has two policies attached to it:
 + A trust policy identifying another AWS account that can assume the role\.
-+ An access policy defining what permissions—for example, `s3:GetObject`—are allowed when someone assumes the role\. For a list of permissions you can specify in a policy, see [Specifying Permissions in a Policy](using-with-s3-actions.md)\.
++ An access policy defining what permissions—for example, `s3:GetObject`—are allowed when someone assumes the role\. For a list of permissions you can specify in a policy, see [Specifying Permissions in a Policy](using-with-s3-actions.mdx)\.
 
 The AWS account identified in the trust policy then grants its user permission to assume the role\. The user can then do the following to access objects:
 + Assume the role and, in response, get temporary security credentials\. 
@@ -43,7 +43,7 @@ The following is a summary of the walkthrough steps:
 
 1. User in Account C first assumes the role, which returns the user temporary security credentials\. Using those temporary credentials, the user then accesses objects in the bucket\.
 
-For this example, you need three accounts\. The following table shows how we refer to these accounts and the administrator users in these accounts\. Per IAM guidelines \(see [About Using an Administrator User to Create Resources and Grant Permissions](example-walkthroughs-managing-access.md#about-using-root-credentials)\) we do not use the account root credentials in this walkthrough\. Instead, you create an administrator user in each account and use those credentials in creating resources and granting them permissions
+For this example, you need three accounts\. The following table shows how we refer to these accounts and the administrator users in these accounts\. Per IAM guidelines \(see [About Using an Administrator User to Create Resources and Grant Permissions](example-walkthroughs-managing-access.mdx#about-using-root-credentials)\) we do not use the account root credentials in this walkthrough\. Instead, you create an administrator user in each account and use those credentials in creating resources and granting them permissions
 
 
 | AWS Account ID | Account Referred To As | Administrator User in the Account  | 
@@ -102,7 +102,7 @@ The canonical user ID is the Amazon S3–only concept\. It is a 64\-character ob
    + If using the AWS CLI, create profiles, AccountAadmin and AccountBadmin, in the config file\.
    + If using the AWS Tools for Windows PowerShell, make sure you store credentials for the session as AccountAadmin and AccountBadmin\.
 
-   For instructions, see [Setting Up the Tools for the Example Walkthroughs](policy-eval-walkthrough-download-awscli.md)\.
+   For instructions, see [Setting Up the Tools for the Example Walkthroughs](policy-eval-walkthrough-download-awscli.mdx)\.
 
 ## Step 1: Do the Account A Tasks<a name="access-policies-walkthrough-example4-step1"></a>
 

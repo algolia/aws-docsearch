@@ -43,7 +43,7 @@ This section provides a list of the permissions for object operations that you c
 |  `s3:PutObjectVersionTagging`  | [PUT Object tagging \(for a Specific Version of the Object\)](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectPUTtagging.html) | 
 |  `s3:RestoreObject`  | [POST Object restore](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectPOSTrestore.html) | 
 
-The following example bucket policy grants the `s3:PutObject` and the `s3:PutObjectAcl` permissions to a user \(Dave\)\. If you remove the `Principal` element, you can attach the policy to a user\. These are object operations, and accordingly the relative\-id portion of the `Resource` ARN identifies objects \(`examplebucket/*`\)\. For more information, see [Specifying Resources in a Policy](s3-arn-format.md)\.
+The following example bucket policy grants the `s3:PutObject` and the `s3:PutObjectAcl` permissions to a user \(Dave\)\. If you remove the `Principal` element, you can attach the policy to a user\. These are object operations, and accordingly the relative\-id portion of the `Resource` ARN identifies objects \(`examplebucket/*`\)\. For more information, see [Specifying Resources in a Policy](s3-arn-format.mdx)\.
 
 ```
 {
@@ -84,7 +84,7 @@ This section provides a list of the permissions related to bucket operations tha
 | s3:ListAllMyBuckets | [GET Service](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTServiceGET.html)  | 
 | s3:ListBucketMultipartUploads | [List Multipart Uploads](https://docs.aws.amazon.com/AmazonS3/latest/API/mpUploadListMPUpload.html) | 
 
-The following example user policy grants the `s3:CreateBucket`, `s3:ListAllMyBuckets`, and the `s3:GetBucketLocation` permissions to a user\. Note that for all these permissions, you set the relative\-id part of the `Resource` ARN to "\*"\. For all other bucket actions, you must specify a bucket name\. For more information, see [Specifying Resources in a Policy](s3-arn-format.md)\.
+The following example user policy grants the `s3:CreateBucket`, `s3:ListAllMyBuckets`, and the `s3:GetBucketLocation` permissions to a user\. Note that for all these permissions, you set the relative\-id part of the `Resource` ARN to "\*"\. For all other bucket actions, you must specify a bucket name\. For more information, see [Specifying Resources in a Policy](s3-arn-format.mdx)\.
 
 ```
 {
@@ -180,7 +180,7 @@ The following user policy grants the `s3:GetBucketAcl` permission on the `exampl
 }
 ```
 
-You can delete objects either by explicitly calling the DELETE Object API or by configuring its lifecycle \(see [Object Lifecycle Management](object-lifecycle-mgmt.md)\) so that Amazon S3 can remove the objects when their lifetime expires\. To explicitly block users or accounts from deleting objects, you must explicitly deny them `s3:DeleteObject`, `s3:DeleteObjectVersion`, and `s3:PutLifecycleConfiguration` permissions\. By default, users have no permissions\. But as you create users, add users to groups, and grant them permissions, it is possible for users to get certain permissions that you did not intend to give\. That is where you can use explicit deny, which supersedes all other permissions a user might have and denies the user permissions for specific actions\.
+You can delete objects either by explicitly calling the DELETE Object API or by configuring its lifecycle \(see [Object Lifecycle Management](object-lifecycle-mgmt.mdx)\) so that Amazon S3 can remove the objects when their lifetime expires\. To explicitly block users or accounts from deleting objects, you must explicitly deny them `s3:DeleteObject`, `s3:DeleteObjectVersion`, and `s3:PutLifecycleConfiguration` permissions\. By default, users have no permissions\. But as you create users, add users to groups, and grant them permissions, it is possible for users to get certain permissions that you did not intend to give\. That is where you can use explicit deny, which supersedes all other permissions a user might have and denies the user permissions for specific actions\.
 
 ## Permissions Related to Account Operations<a name="using-with-s3-actions-related-to-accounts"></a>
 
@@ -199,7 +199,7 @@ This section provides a list of the permissions related to account operations th
 | s3:UpdateJobPriority | [UpdateJobPriority](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTAccountPOSTUpdateJobPriority.html) | 
 | s3:UpdateJobStatus | [UpdateJobStatus](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTAccountPOSTUpdateJobStatus.html) | 
 
-The following example user policy grants the `s3:GetAccountPublicAccessBlock` permission to a user\. Note that for these permissions, you set the `Resource` value to `"*"`\. For more information, see [Specifying Resources in a Policy](s3-arn-format.md)\.
+The following example user policy grants the `s3:GetAccountPublicAccessBlock` permission to a user\. Note that for these permissions, you set the `Resource` value to `"*"`\. For more information, see [Specifying Resources in a Policy](s3-arn-format.mdx)\.
 
 ```
 {

@@ -54,13 +54,13 @@ The easiest way to set up an inventory is by using the AWS Management Console, b
 
 1. **Add a bucket policy for the destination bucket\.**
 
-   You must create a bucket policy on the destination bucket to grant permissions to Amazon S3 to write objects to the bucket in the defined location\. For an example policy, see [Granting Permissions for Amazon S3 Inventory and Amazon S3 Analytics](example-bucket-policies.md#example-bucket-policies-use-case-9)\. 
+   You must create a bucket policy on the destination bucket to grant permissions to Amazon S3 to write objects to the bucket in the defined location\. For an example policy, see [Granting Permissions for Amazon S3 Inventory and Amazon S3 Analytics](example-bucket-policies.mdx#example-bucket-policies-use-case-9)\. 
 
 1. **Configure an inventory to list the objects in a source bucket and publish the list to a destination bucket\.**
 
    When you configure an inventory list for a source bucket, you specify the destination bucket where you want the list to be stored, and whether you want to generate the list daily or weekly\. You can also configure what object metadata to include and whether to list all object versions or only current versions\. 
 
-   You can specify that the inventory list file be encrypted by using Amazon S3 managed keys \(SSE\-S3\) or customer managed keys \(CMKs\) stored in AWS Key Management Service \(AWS KMS\)\. For more information about SSE\-S3 and SSE\-KMS, see [Protecting Data Using Server\-Side Encryption](serv-side-encryption.md)\. If you plan to use SSE\-KMS encryption, see Step 3\.
+   You can specify that the inventory list file be encrypted by using Amazon S3 managed keys \(SSE\-S3\) or customer managed keys \(CMKs\) stored in AWS Key Management Service \(AWS KMS\)\. For more information about SSE\-S3 and SSE\-KMS, see [Protecting Data Using Server\-Side Encryption](serv-side-encryption.mdx)\. If you plan to use SSE\-KMS encryption, see Step 3\.
    + For information about how to use the console to configure an inventory list, see [How Do I Configure Amazon S3 Inventory?](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/configure-inventory.html) in the *Amazon Simple Storage Service Console User Guide*\.
    + To use the Amazon S3 API to configure an inventory list, use the [PUT Bucket inventory configuration](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTInventoryConfig.html) REST API, or the equivalent from the AWS CLI or AWS SDKs\. 
 
@@ -109,26 +109,26 @@ An inventory list file contains a list of the objects in the source bucket and m
 The inventory list contains a list of the objects in an S3 bucket and the following metadata for each listed object: 
 + **Bucket name** – The name of the bucket that the inventory is for\.
 + **Key name** – Object key name \(or key\) that uniquely identifies the object in the bucket\. When using the CSV file format, the key name is URL\-encoded and must be decoded before you can use it\.
-+ **Version ID** – Object version ID\. When you enable versioning on a bucket, Amazon S3 assigns a version number to objects that are added to the bucket\. For more information, see [Object Versioning](ObjectVersioning.md)\. \(This field is not included if the list is only for the current version of objects\.\)
++ **Version ID** – Object version ID\. When you enable versioning on a bucket, Amazon S3 assigns a version number to objects that are added to the bucket\. For more information, see [Object Versioning](ObjectVersioning.mdx)\. \(This field is not included if the list is only for the current version of objects\.\)
 + **IsLatest** – Set to `True` if the object is the current version of the object\. \(This field is not included if the list is only for the current version of objects\.\)
 + **Size** – Object size in bytes\.
 + **Last modified date** – Object creation date or the last modified date, whichever is the latest\.
 + **ETag** – The entity tag is a hash of the object\. The ETag reflects changes only to the contents of an object, not its metadata\. The ETag may or may not be an MD5 digest of the object data\. Whether it is depends on how the object was created and how it is encrypted\.
-+ **Storage class** – Storage class used for storing the object\. For more information, see [Amazon S3 Storage Classes](storage-class-intro.md)\.
++ **Storage class** – Storage class used for storing the object\. For more information, see [Amazon S3 Storage Classes](storage-class-intro.mdx)\.
 + **Intelligent\-Tiering access tier** – Access tier \(frequent or infrequent\) of the object if stored in Intelligent\-Tiering\. For more information, see [Amazon S3 Intelligent\-Tiering](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html#sc-dynamic-data-access)\.
-+ **Multipart upload flag** – Set to `True` if the object was uploaded as a multipart upload\. For more information, see [Multipart Upload Overview](mpuoverview.md)\.
-+ **Delete marker** – Set to `True`, if the object is a delete marker\. For more information, see [Object Versioning](ObjectVersioning.md)\. \(This field is automatically added to your report if you've configured the report to include all versions of your objects\)\.
-+ **Replication status** – Set to `PENDING`, `COMPLETED`, `FAILED`, or `REPLICA.` For more information, see [Replication Status Information](replication-status.md)\.
-+ **Encryption status** – Set to `SSE-S3`, `SSE-C`, `SSE-KMS`, or `NOT-SSE`\. The server\-side encryption status for SSE\-S3, SSE\-KMS, and SSE with customer\-provided keys \(SSE\-C\)\. A status of `NOT-SSE` means that the object is not encrypted with server\-side encryption\. For more information, see [Protecting Data Using Encryption](UsingEncryption.md)\.
-+ **Object lock Retain until date** – The date until which the locked object cannot be deleted\. For more information, see [Locking Objects Using Amazon S3 Object Lock](object-lock.md)\.
-+ **Object lock Mode** – Set to `Governance` or `Compliance` for objects that are locked\. For more information, see [Locking Objects Using Amazon S3 Object Lock](object-lock.md)\.
-+ **Object lock Legal hold status ** – Set to `On` if a legal hold has been applied to an object; otherwise it is set to `Off`\. For more information, see [Locking Objects Using Amazon S3 Object Lock](object-lock.md)\.
++ **Multipart upload flag** – Set to `True` if the object was uploaded as a multipart upload\. For more information, see [Multipart Upload Overview](mpuoverview.mdx)\.
++ **Delete marker** – Set to `True`, if the object is a delete marker\. For more information, see [Object Versioning](ObjectVersioning.mdx)\. \(This field is automatically added to your report if you've configured the report to include all versions of your objects\)\.
++ **Replication status** – Set to `PENDING`, `COMPLETED`, `FAILED`, or `REPLICA.` For more information, see [Replication Status Information](replication-status.mdx)\.
++ **Encryption status** – Set to `SSE-S3`, `SSE-C`, `SSE-KMS`, or `NOT-SSE`\. The server\-side encryption status for SSE\-S3, SSE\-KMS, and SSE with customer\-provided keys \(SSE\-C\)\. A status of `NOT-SSE` means that the object is not encrypted with server\-side encryption\. For more information, see [Protecting Data Using Encryption](UsingEncryption.mdx)\.
++ **Object lock Retain until date** – The date until which the locked object cannot be deleted\. For more information, see [Locking Objects Using Amazon S3 Object Lock](object-lock.mdx)\.
++ **Object lock Mode** – Set to `Governance` or `Compliance` for objects that are locked\. For more information, see [Locking Objects Using Amazon S3 Object Lock](object-lock.mdx)\.
++ **Object lock Legal hold status ** – Set to `On` if a legal hold has been applied to an object; otherwise it is set to `Off`\. For more information, see [Locking Objects Using Amazon S3 Object Lock](object-lock.mdx)\.
 
 The following is an example CSV inventory list opened in a spreadsheet application\. The heading row is shown only to help clarify the example; it is not included in the actual list\.
 
 ![\[Screenshot of an example inventory list opened in a spreadsheet application.\]](http://docs.aws.amazon.com/AmazonS3/latest/dev/images/inventory-list.png)
 
-We recommend that you create a lifecycle policy that deletes old inventory lists\. For more information, see [Object Lifecycle Management](object-lifecycle-mgmt.md)\.
+We recommend that you create a lifecycle policy that deletes old inventory lists\. For more information, see [Object Lifecycle Management](object-lifecycle-mgmt.mdx)\.
 
 ### Inventory Consistency<a name="storage-inventory-contents-consistency"></a>
 
@@ -248,7 +248,7 @@ Reading `symlink.txt` with [Apache Hive](https://hive.apache.org/) and [Apache S
 
 You can set up an Amazon S3 event notification to receive notice when the manifest checksum file is created, which indicates that an inventory list has been added to the destination bucket\. The manifest is an up\-to\-date list of all the inventory lists at the destination location\.
 
-Amazon S3 can publish events to an Amazon Simple Notification Service \(Amazon SNS\) topic, an Amazon Simple Queue Service \(Amazon SQS\) queue, or an AWS Lambda function\. For more information, see [ Configuring Amazon S3 Event Notifications](NotificationHowTo.md)\.
+Amazon S3 can publish events to an Amazon Simple Notification Service \(Amazon SNS\) topic, an Amazon Simple Queue Service \(Amazon SQS\) queue, or an AWS Lambda function\. For more information, see [ Configuring Amazon S3 Event Notifications](NotificationHowTo.mdx)\.
 
 The following notification configuration defines that all `manifest.checksum` files newly added to the destination bucket are processed by the AWS Lambda `cloud-function-list-write`\.
 

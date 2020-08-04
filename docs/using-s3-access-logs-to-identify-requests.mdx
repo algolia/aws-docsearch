@@ -3,7 +3,7 @@
  You can identify Amazon S3 requests using Amazon S3 access logs\. 
 
 **Note**  
-We recommend that you use AWS CloudTrail data events instead of Amazon S3 access logs\. CloudTrail data events are easier to set up and contain more information\. For more information, see [ Using AWS CloudTrail to Identify Amazon S3 Requests](cloudtrail-request-identification.md)\.
+We recommend that you use AWS CloudTrail data events instead of Amazon S3 access logs\. CloudTrail data events are easier to set up and contain more information\. For more information, see [ Using AWS CloudTrail to Identify Amazon S3 Requests](cloudtrail-request-identification.mdx)\.
 Depending on how many access requests you get, it may require more resources and/or more time to analyze your logs\.
 
 **Topics**
@@ -38,7 +38,7 @@ In this example, you have the following five buckets:
 
 1. You can then enable the Amazon S3 access logs using the following methods:
    + Using the [AWS Management Console](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/server-access-logging.html) or,
-   + [Enabling Logging Programmatically](enable-logging-programming.md) or, 
+   + [Enabling Logging Programmatically](enable-logging-programming.mdx) or, 
    + Using the [AWS CLI put\-bucket\-logging command](https://docs.aws.amazon.com/cli/latest/reference/s3api/put-bucket-logging.html) to programmatically enable access logs on a bucket using the following commands:
 
      1. First, grant Amazon S3 permission using `put-bucket-acl`:
@@ -221,7 +221,7 @@ To reduce the time that you retain your log, you can [create an Amazon S3 lifecy
 Amazon S3 support for Signature Version 2 will be turned off \(deprecated\)\. After that, Amazon S3 will no longer accept requests that use Signature Version 2, and all requests must use *Signature Version 4* signing\. You can identify Signature Version 2 access requests using Amazon S3 access logs\. 
 
 **Note**  
-We recommend that you use AWS CloudTrail data events instead of Amazon S3 access logs\. CloudTrail data events are easier to set up and contain more information\. For more information, see [Using AWS CloudTrail to Identify Amazon S3 Signature Version 2 Requests ](cloudtrail-request-identification.md#cloudtrail-identification-sigv2-requests)\.
+We recommend that you use AWS CloudTrail data events instead of Amazon S3 access logs\. CloudTrail data events are easier to set up and contain more information\. For more information, see [Using AWS CloudTrail to Identify Amazon S3 Signature Version 2 Requests ](cloudtrail-request-identification.mdx#cloudtrail-identification-sigv2-requests)\.
 
 **Example — Show all requesters that are sending Signature Version 2 traffic**  
 
@@ -281,8 +281,8 @@ parse_datetime('2019-07-02:00:42:42','yyyy-MM-dd:HH:mm:ss')
 You can modify the date range as needed to suit your needs\.
 These query examples may also be useful for security monitoring\. You can review the results for `PutObject` or `GetObject` calls from unexpected or unauthorized IP addresses/requesters and for identifying any anonymous requests to your buckets\.
  This query only retrieves information from the time at which logging was enabled\. 
-If you are using Amazon S3 AWS CloudTrail logs, see [Using AWS CloudTrail to Identify Access to Amazon S3 Objects](cloudtrail-request-identification.md#cloudtrail-identification-object-access)\. 
+If you are using Amazon S3 AWS CloudTrail logs, see [Using AWS CloudTrail to Identify Access to Amazon S3 Objects](cloudtrail-request-identification.mdx#cloudtrail-identification-object-access)\. 
 
 ## Related Resources<a name="s3-access-logs-requests-more-info"></a>
-+ [Amazon S3 Server Access Log Format](LogFormat.md)
++ [Amazon S3 Server Access Log Format](LogFormat.mdx)
 + [Querying AWS Service Logs](https://docs.aws.amazon.com/athena/latest/ug/querying-AWS-service-logs.html)
