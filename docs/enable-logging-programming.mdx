@@ -40,7 +40,7 @@ Amazon S3 writes the log files to the target bucket as a member of the predefine
 1. http://acs.amazonaws.com/groups/s3/LogDelivery
 ```
 
- To grant `WRITE` and `READ_ACP` permissions, add the following grants\. For information about ACLs, see [Managing Access with ACLs](S3_ACLs_UsingACLs.md)\.
+ To grant `WRITE` and `READ_ACP` permissions, add the following grants\. For information about ACLs, see [Managing Access with ACLs](S3_ACLs_UsingACLs.mdx)\.
 
 ```
  1. <Grant>
@@ -57,11 +57,11 @@ Amazon S3 writes the log files to the target bucket as a member of the predefine
 12. </Grant>
 ```
 
-For examples of adding ACL grants programmatically using the AWS SDKs, see [Managing ACLs Using the AWS SDK for JavaConfiguring ACL Grants on an Existing Object](acl-using-java-sdk.md) and [Managing ACLs Using the AWS SDK for \.NET ](acl-using-dot-net-sdk.md)\.
+For examples of adding ACL grants programmatically using the AWS SDKs, see [Managing ACLs Using the AWS SDK for JavaConfiguring ACL Grants on an Existing Object](acl-using-java-sdk.mdx) and [Managing ACLs Using the AWS SDK for \.NET ](acl-using-dot-net-sdk.mdx)\.
 
 ## Example: AWS SDK for \.NET<a name="enable-logging-dotnetsdk-exmaple"></a>
 
-The following C\# example enables logging on a bucket\. You need to create two buckets, a source bucket and a target bucket\. The example first grants the Log Delivery group the necessary permission to write logs to the target bucket and then enables logging on the source bucket\. For more information, see [Enabling Logging Programmatically](#enable-logging-programming)\. For instructions on how to create and test a working sample, see [Running the Amazon S3 \.NET Code Examples](UsingTheMPDotNetAPI.md#TestingDotNetApiSamples)\.
+The following C\# example enables logging on a bucket\. You need to create two buckets, a source bucket and a target bucket\. The example first grants the Log Delivery group the necessary permission to write logs to the target bucket and then enables logging on the source bucket\. For more information, see [Enabling Logging Programmatically](#enable-logging-programming)\. For instructions on how to create and test a working sample, see [Running the Amazon S3 \.NET Code Examples](UsingTheMPDotNetAPI.mdx#TestingDotNetApiSamples)\.
 
 **Example**  
 
@@ -143,5 +143,5 @@ The following C\# example enables logging on a bucket\. You need to create two b
 ```
 
 ## Related Resources<a name="enable-logging-programming-more-info"></a>
-+ [Amazon S3 Server Access Logging](ServerLogs.md)
++ [Amazon S3 Server Access Logging](ServerLogs.mdx)
 + [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html) in the *AWS CloudFormation User Guide*

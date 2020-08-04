@@ -4,11 +4,11 @@
 + [Concurrent Multipart Upload Operations](#distributedmpupload)
 + [Multipart Upload and Pricing](#mpuploadpricing)
 + [Aborting Incomplete Multipart Uploads Using a Bucket Lifecycle Policy](#mpu-abort-incomplete-mpu-lifecycle-config)
-+ [Amazon S3 Multipart Upload Limits](qfacts.md)
-+ [API Support for Multipart Upload](sdksupportformpu.md)
-+ [Multipart Upload API and Permissions](mpuAndPermissions.md)
++ [Amazon S3 Multipart Upload Limits](qfacts.mdx)
++ [API Support for Multipart Upload](sdksupportformpu.mdx)
++ [Multipart Upload API and Permissions](mpuAndPermissions.mdx)
 
-The Multipart upload API enables you to upload large objects in parts\. You can use this API to upload new large objects or make a copy of an existing object \(see [Operations on Objects](ObjectOperations.md)\)\. 
+The Multipart upload API enables you to upload large objects in parts\. You can use this API to upload new large objects or make a copy of an existing object \(see [Operations on Objects](ObjectOperations.mdx)\)\. 
 
 Multipart uploading is a three\-step process: You initiate the upload, you upload the object parts, and after you have uploaded all the parts, you complete the multipart upload\. Upon receiving the complete multipart upload request, Amazon S3 constructs the object from the uploaded parts, and you can then access the object just as you would any other object in your bucket\. 
 
@@ -65,7 +65,7 @@ Amazon S3 supports a bucket lifecycle rule that you can use to direct Amazon S3 
 
 In the example, the rule does not specify a value for the `Prefix` element \([object key name prefix](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html#keyprefix)\)\. Therefore, it applies to all objects in the bucket for which you initiated multipart uploads\. Any multipart uploads that were initiated and did not complete within seven days become eligible for an abort operation\. The abort action has no effect on completed multipart uploads\.
 
-For more information about the bucket lifecycle configuration, see [Object Lifecycle Management](object-lifecycle-mgmt.md)\.
+For more information about the bucket lifecycle configuration, see [Object Lifecycle Management](object-lifecycle-mgmt.mdx)\.
 
 **Note**  
 If the multipart upload is completed within the number of days specified in the rule, the `AbortIncompleteMultipartUpload` lifecycle action does not apply \(that is, Amazon S3 will not take any action\)\. Also, this action does not apply to objects, no objects are deleted by this lifecycle action\.
@@ -80,7 +80,7 @@ $ aws s3api put-bucket-lifecycle  \
 
 To test the CLI command, do the following:
 
-1.  Set up the AWS CLI\. For instructions, see [Setting Up the AWS CLI](setup-aws-cli.md)\. 
+1.  Set up the AWS CLI\. For instructions, see [Setting Up the AWS CLI](setup-aws-cli.mdx)\. 
 
 1.  Save the following example lifecycle configuration in a file \(lifecycle\.json\)\. The example configuration specifies empty prefix and therefore it applies to all objects in the bucket\. You can specify a prefix to restrict the policy to a subset of objects\.
 

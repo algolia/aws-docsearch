@@ -12,7 +12,7 @@ You can add rules in a lifecycle configuration to tell Amazon S3 to transition o
 
 ## Supported Transitions and Related Constraints<a name="lifecycle-general-considerations-transition-sc"></a>
 
-In a lifecycle configuration, you can define rules to transition objects from one storage class to another to save on storage costs\. When you don't know the access patterns of your objects, or your access patterns are changing over time, you can transition the objects to the INTELLIGENT\_TIERING storage class for automatic cost savings\. For information about storage classes, see [Amazon S3 Storage Classes](storage-class-intro.md)\. 
+In a lifecycle configuration, you can define rules to transition objects from one storage class to another to save on storage costs\. When you don't know the access patterns of your objects, or your access patterns are changing over time, you can transition the objects to the INTELLIGENT\_TIERING storage class for automatic cost savings\. For information about storage classes, see [Amazon S3 Storage Classes](storage-class-intro.mdx)\. 
 
 Amazon S3 supports a waterfall model for transitioning between storage classes, as shown in the following diagram\. 
 
@@ -82,7 +82,7 @@ The following are the general considerations for you to consider before you arch
 
   Archived objects are Amazon S3 objects, but before you can access an archived object, you must first restore a temporary copy of it\. The restored object copy is available only for the duration you specify in the restore request\. After that, Amazon S3 deletes the temporary copy, and the object remains archived in Amazon S3 Glacier\. 
 
-  You can restore an object by using the Amazon S3 console or programmatically by using the AWS SDKs wrapper libraries or the Amazon S3 REST API in your code\. For more information, see [Restoring Archived Objects](restoring-objects.md)\.
+  You can restore an object by using the Amazon S3 console or programmatically by using the AWS SDKs wrapper libraries or the Amazon S3 REST API in your code\. For more information, see [Restoring Archived Objects](restoring-objects.mdx)\.
 + Objects that are stored in the GLACIER storage class can only be transitioned to the DEEP ARCHIVE storage class\.
 
   You can use a lifecycle configuration rule to convert the storage class of an object from GLACIER to the DEEP ARCHIVE storage class only\. If you want to change the storage class of an object that is stored in GLACIER to a storage class other than DEEP ARCHIVE, you must use the restore operation to make a temporary copy of the object first\. Then use the copy operation to overwrite the object specifying STANDARD, INTELLIGENT\_TIERING, STANDARD\_IA, ONEZONE\_IA, or REDUCED\_REDUNDANCY as the storage class\.
@@ -103,7 +103,7 @@ If you are planning to archive infrequently accessed data for a period of months
   If you are archiving small objects, consider these storage charges\. Also consider aggregating many small objects into a smaller number of large objects to reduce overhead costs\.
 + **Number of days you plan to keep objects archived**—GLACIER and DEEP ARCHIVE are long\-term archival solutions\. The minimal storage duration period is 90 days for the GLACIER storage class and 180 days for DEEP ARCHIVE\. Deleting data that is archived to Amazon S3 Glacier is free if the objects you delete are archived for more than the minimal storage duration period\. If you delete or overwrite an archived object within the minimal duration period, Amazon S3 charges a prorated early deletion fee\.
 + **Amazon S3 GLACIER and DEEP ARCHIVE transition request charges**— Each object that you transition to the GLACIER or DEEP ARCHIVE storage class constitutes one transition request\. There is a cost for each such request\. If you plan to transition a large number of objects, consider the request costs\. If you are archiving small objects, consider aggregating many small objects into a smaller number of large objects to reduce transition request costs\.
-+ **Amazon S3 GLACIER and DEEP ARCHIVE data restore charges**—GLACIER and DEEP ARCHIVE are designed for long\-term archival of data that you access infrequently\. For information about data restoration charges, see [How much does it cost to retrieve data from Amazon S3 Glacier?](https://aws.amazon.com/s3/faqs/#How_am_I_charged_for_deleting_objects_from_Amazon_Glacier_that_are_less_than_3_months_old) in the Amazon S3 FAQ\. For information about how to restore data from Amazon S3 Glacier, see [Restoring Archived Objects](restoring-objects.md)\. 
++ **Amazon S3 GLACIER and DEEP ARCHIVE data restore charges**—GLACIER and DEEP ARCHIVE are designed for long\-term archival of data that you access infrequently\. For information about data restoration charges, see [How much does it cost to retrieve data from Amazon S3 Glacier?](https://aws.amazon.com/s3/faqs/#How_am_I_charged_for_deleting_objects_from_Amazon_Glacier_that_are_less_than_3_months_old) in the Amazon S3 FAQ\. For information about how to restore data from Amazon S3 Glacier, see [Restoring Archived Objects](restoring-objects.mdx)\. 
 
 When you archive objects to Amazon S3 Glacier by using object lifecycle management, Amazon S3 transitions these objects asynchronously\. There might be a delay between the transition date in the lifecycle configuration rule and the date of the physical transition\. You are charged Amazon S3 Glacier prices based on the transition date specified in the rule\.
 
@@ -120,4 +120,4 @@ Archived objects are not accessible in real time\. You must first initiate a res
 **Note**  
 When you restore an archive, you are paying for both the archive \(GLACIER or DEEP ARCHIVE rate\) and a copy that you restored temporarily \(REDUCED\_REDUNDANCY storage rate\)\. For information about pricing, see [Amazon S3 Pricing](https://aws.amazon.com/s3/pricing/)\. 
 
-You can restore an object copy programmatically or by using the Amazon S3 console\. Amazon S3 processes only one restore request at a time per object\. For more information, see [Restoring Archived Objects](restoring-objects.md)\.
+You can restore an object copy programmatically or by using the Amazon S3 console\. Amazon S3 processes only one restore request at a time per object\. For more information, see [Restoring Archived Objects](restoring-objects.mdx)\.

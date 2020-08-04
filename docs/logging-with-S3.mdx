@@ -1,6 +1,6 @@
 # Logging with Amazon S3<a name="logging-with-S3"></a>
 
-You can record the actions that are taken by users, roles, or AWS services on Amazon S3 resources and maintain log records for auditing and compliance purposes\. To do this, you can use [Amazon S3 Server Access Logging](ServerLogs.md), [AWS CloudTrail logs](https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudtrail-logging.html), or a combination of both\. We recommend that you use AWS CloudTrail for logging bucket and object\-level actions for your Amazon S3 resources\. 
+You can record the actions that are taken by users, roles, or AWS services on Amazon S3 resources and maintain log records for auditing and compliance purposes\. To do this, you can use [Amazon S3 Server Access Logging](ServerLogs.mdx), [AWS CloudTrail logs](https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudtrail-logging.html), or a combination of both\. We recommend that you use AWS CloudTrail for logging bucket and object\-level actions for your Amazon S3 resources\. 
 
 The following table lists the key properties of AWS CloudTrail logs and Amazon S3 server access logs\. 
 
@@ -31,4 +31,4 @@ The following table lists the key properties of AWS CloudTrail logs and Amazon S
 
 1. CloudTrail does not deliver logs for requests that fail authentication \(in which the provided credentials are not valid\)\. However, it does include logs for requests in which authorization fails \(`AccessDenied`\) and requests that are made by anonymous users\.
 
-1. The S3 bucket owner receives CloudTrail logs only if the account also owns or has full access to the object in the request\. For more information, see [Object\-Level Actions in Cross\-Account Scenarios](cloudtrail-logging.md#cloudtrail-object-level-crossaccount)\. 
+1. The S3 bucket owner receives CloudTrail logs only if the account also owns or has full access to the object in the request\. For more information, see [Object\-Level Actions in Cross\-Account Scenarios](cloudtrail-logging.mdx#cloudtrail-object-level-crossaccount)\. 

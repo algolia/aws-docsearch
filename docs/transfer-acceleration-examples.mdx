@@ -4,7 +4,7 @@ title: Transfer acceleration examples
 ---
 # Amazon S3 Transfer Acceleration Examples<a name="transfer-acceleration-examples"></a>
 
-This section provides examples of how to enable Amazon S3 Transfer Acceleration on a bucket and use the acceleration endpoint for the enabled bucket\. Some of the AWS SDK supported languages \(for example, Java and \.NET\) use an accelerate endpoint client configuration flag so you don't need to explicitly set the endpoint for Transfer Acceleration to *bucketname*\.s3\-accelerate\.amazonaws\.com\. For more information about Transfer Acceleration, see [Amazon S3 Transfer Acceleration](transfer-acceleration.md)\.
+This section provides examples of how to enable Amazon S3 Transfer Acceleration on a bucket and use the acceleration endpoint for the enabled bucket\. Some of the AWS SDK supported languages \(for example, Java and \.NET\) use an accelerate endpoint client configuration flag so you don't need to explicitly set the endpoint for Transfer Acceleration to *bucketname*\.s3\-accelerate\.amazonaws\.com\. For more information about Transfer Acceleration, see [Amazon S3 Transfer Acceleration](transfer-acceleration.mdx)\.
 
 **Topics**
 + [Using the Amazon S3 Console](#transfer-acceleration-examples-console)
@@ -21,7 +21,7 @@ For information about enabling Transfer Acceleration on a bucket using the Amazo
 
 ## Using Transfer Acceleration from the AWS Command Line Interface \(AWS CLI\)<a name="transfer-acceleration-examples-aws-cli"></a>
 
-This section provides examples of AWS CLI commands used for Transfer Acceleration\. For instructions on setting up the AWS CLI, see [Setting Up the AWS CLI](setup-aws-cli.md)\.
+This section provides examples of AWS CLI commands used for Transfer Acceleration\. For instructions on setting up the AWS CLI, see [Setting Up the AWS CLI](setup-aws-cli.mdx)\.
 
 ### Enabling Transfer Acceleration on a Bucket Using the AWS CLI<a name="transfer-acceleration-examples-aws-cli-1"></a>
 
@@ -80,7 +80,7 @@ The following example shows how to use an accelerate endpoint to upload an objec
 + Enables transfer acceleration on a specified bucket\. This step is necessary only if the bucket you specify doesn't already have transfer acceleration enabled\.
 + Verifies that transfer acceleration is enabled for the specified bucket\.
 + Uploads a new object to the specified bucket using the bucket's accelerate endpoint\.
-For more information about using Transfer Acceleration, see [Getting Started with Amazon S3 Transfer Acceleration](transfer-acceleration.md#transfer-acceleration-getting-started)\. For instructions on creating and testing a working sample, see [Testing the Amazon S3 Java Code Examples](UsingTheMPJavaAPI.md#TestingJavaSamples)\.  
+For more information about using Transfer Acceleration, see [Getting Started with Amazon S3 Transfer Acceleration](transfer-acceleration.mdx#transfer-acceleration-getting-started)\. For instructions on creating and testing a working sample, see [Testing the Amazon S3 Java Code Examples](UsingTheMPJavaAPI.mdx#TestingJavaSamples)\.  
 
 ```
 import com.amazonaws.AmazonServiceException;
@@ -138,7 +138,7 @@ public class TransferAcceleration {
 
 ## Using Transfer Acceleration from the AWS SDK for \.NET<a name="transfer-acceleration-examples-dotnet"></a>
 
-The following example shows how to use the AWS SDK for \.NET to enable Transfer Acceleration on a bucket\. For instructions on how to create and test a working sample, see [Running the Amazon S3 \.NET Code Examples](UsingTheMPDotNetAPI.md#TestingDotNetApiSamples)\.
+The following example shows how to use the AWS SDK for \.NET to enable Transfer Acceleration on a bucket\. For instructions on how to create and test a working sample, see [Running the Amazon S3 \.NET Code Examples](UsingTheMPDotNetAPI.mdx#TestingDotNetApiSamples)\.
 
 **Example**  
 

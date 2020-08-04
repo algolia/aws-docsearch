@@ -4,7 +4,7 @@ You can delete object versions whenever you want\. In addition, you can also def
 + The `Expiration` action applies to the current object version and instead of deleting the current object version, Amazon S3 retains the current version as a noncurrent version by adding a delete marker, which then becomes the current version\.
 + The `NoncurrentVersionExpiration` action applies to noncurrent object versions, and Amazon S3 permanently removes these object versions\. You cannot recover permanently removed objects\.
 
-For more information, see [Object Lifecycle Management](object-lifecycle-mgmt.md)\.
+For more information, see [Object Lifecycle Management](object-lifecycle-mgmt.mdx)\.
 
 A `DELETE` request has the following use cases:
 + When versioning is enabled, a simple `DELETE` cannot permanently delete an object\. 
@@ -24,7 +24,7 @@ For instructions see, [How Do I See the Versions of an S3 Object?](https://docs.
 
 ## Using the AWS SDKs<a name="delete-obj-version-version-enabled-bucket-sdks"></a>
 
-For examples of deleting objects using the AWS SDKs for Java, \.NET, and PHP, see [Deleting Objects](DeletingObjects.md)\. The examples for deleting objects in nonversioned and versioning\-enabled buckets are the same, although in the case of versioning\-enabled buckets, Amazon S3 assigns a version number\. Otherwise, the version number is null\. 
+For examples of deleting objects using the AWS SDKs for Java, \.NET, and PHP, see [Deleting Objects](DeletingObjects.mdx)\. The examples for deleting objects in nonversioned and versioning\-enabled buckets are the same, although in the case of versioning\-enabled buckets, Amazon S3 assigns a version number\. Otherwise, the version number is null\. 
 
 For information about using other AWS SDKs, see [Sample Code and Libraries](https://aws.amazon.com/code/)\. 
 
@@ -48,10 +48,10 @@ The following example shows how to delete version UIORUnfnd89493jJFJ of `photo.g
 
 ## Related Topics<a name="delete-obj-version-enabled-related-topics"></a>
 
- [Using MFA Delete](UsingMFADelete.md) 
+ [Using MFA Delete](UsingMFADelete.mdx) 
 
- [Working with Delete Markers](DeleteMarker.md) 
+ [Working with Delete Markers](DeleteMarker.mdx) 
 
- [Removing Delete Markers](RemDelMarker.md) 
+ [Removing Delete Markers](RemDelMarker.mdx) 
 
- [Using Versioning](Versioning.md) 
+ [Using Versioning](Versioning.mdx) 

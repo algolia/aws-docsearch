@@ -6,8 +6,8 @@ This section contains information on how to make requests to Amazon S3 endpoints
 + [Constructing S3 Hostnames for REST API Requests](#constructing-hostname-rest-api-requests)
 + [Virtual Hosted‐Style and Path‐Style Requets](#virtual-hosted-path-style-requests)
 + [Making Requests to Dual\-Stack Endpoints by Using the REST API](#rest-api-dual-stack)
-+ [Virtual Hosting of Buckets](VirtualHosting.md)
-+ [Request Redirection and the REST API](RESTRedirect.md)
++ [Virtual Hosting of Buckets](VirtualHosting.mdx)
++ [Request Redirection and the REST API](RESTRedirect.mdx)
 
 ## Constructing S3 Hostnames for REST API Requests<a name="constructing-hostname-rest-api-requests"></a>
 
@@ -25,10 +25,10 @@ For a complete list of Amazon S3 Regions and endpoints, see [Amazon S3 Regions a
 
 ## Virtual Hosted‐Style and Path‐Style Requets<a name="virtual-hosted-path-style-requests"></a>
 
-When making requests by using the REST API, you can use virtual hosted–style or path\-style URIs for the Amazon S3 endpoints\. For more information, see [Virtual Hosting of Buckets](VirtualHosting.md)\.
+When making requests by using the REST API, you can use virtual hosted–style or path\-style URIs for the Amazon S3 endpoints\. For more information, see [Virtual Hosting of Buckets](VirtualHosting.mdx)\.
 
 **Example Virtual Hosted–Style Request**  
-Following is an example of a virtual hosted–style request to delete the `puppy.jpg` file from the bucket named `examplebucket` in the US West \(Oregon\) Region\. For more information about virtual hosted\-style requests, see [Virtual Hosted\-Style Requests](VirtualHosting.md#virtual-hosted-style-access)\.  
+Following is an example of a virtual hosted–style request to delete the `puppy.jpg` file from the bucket named `examplebucket` in the US West \(Oregon\) Region\. For more information about virtual hosted\-style requests, see [Virtual Hosted\-Style Requests](VirtualHosting.mdx#virtual-hosted-style-access)\.  
 
 ```
 1. DELETE /puppy.jpg HTTP/1.1
@@ -49,7 +49,7 @@ Following is an example of a path\-style version of the same request\.
 5. Authorization: authorization string
 ```
 Currently Amazon S3 supports virtual hosted\-style and path\-style access in all Regions, but this will be changing \(see the following **Important** note\.  
-For more information about path\-style requests, see [Path\-Style Requests](VirtualHosting.md#path-style-access)\.  
+For more information about path\-style requests, see [Path\-Style Requests](VirtualHosting.mdx#path-style-access)\.  
 Buckets created after September 30, 2020, will support only virtual hosted\-style requests\. Path\-style requests will continue to be supported for buckets created on or before this date\. For more information, see [ Amazon S3 Path Deprecation Plan – The Rest of the Story](https://aws.amazon.com/blogs/aws/amazon-s3-path-deprecation-plan-the-rest-of-the-story/)\.
 
 ## Making Requests to Dual\-Stack Endpoints by Using the REST API<a name="rest-api-dual-stack"></a>
@@ -78,4 +78,4 @@ Or you can use a path\-style endpoint in your request as shown in the following 
 5. Authorization: authorization string
 ```
 
-For more information about dual\-stack endpoints, see [Using Amazon S3 Dual\-Stack Endpoints](dual-stack-endpoints.md)\.
+For more information about dual\-stack endpoints, see [Using Amazon S3 Dual\-Stack Endpoints](dual-stack-endpoints.mdx)\.

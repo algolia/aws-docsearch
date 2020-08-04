@@ -24,7 +24,7 @@ The following is a summary of the walkthrough steps:
 
 1. User in Account B then verifies permissions by accessing an object in the bucket owned by Account A\.
 
-For this example, you need two accounts\. The following table shows how we refer to these accounts and the administrator users in them\. Per IAM guidelines \(see [About Using an Administrator User to Create Resources and Grant Permissions](example-walkthroughs-managing-access.md#about-using-root-credentials)\) we do not use the account root credentials in this walkthrough\. Instead, you create an administrator user in each account and use those credentials in creating resources and granting them permissions\.
+For this example, you need two accounts\. The following table shows how we refer to these accounts and the administrator users in them\. Per IAM guidelines \(see [About Using an Administrator User to Create Resources and Grant Permissions](example-walkthroughs-managing-access.mdx#about-using-root-credentials)\) we do not use the account root credentials in this walkthrough\. Instead, you create an administrator user in each account and use those credentials in creating resources and granting them permissions\.
 
 
 | AWS Account ID | Account Referred To As | Administrator User in the Account  | 
@@ -62,9 +62,9 @@ All the tasks of creating users and granting permissions are done in the AWS Man
    + If using the AWS CLI, create two profiles, AccountAadmin and AccountBadmin, in the config file\.
    + If using the AWS Tools for Windows PowerShell, make sure you store credentials for the session as AccountAadmin and AccountBadmin\.
 
-   For instructions, see [Setting Up the Tools for the Example Walkthroughs](policy-eval-walkthrough-download-awscli.md)\. 
+   For instructions, see [Setting Up the Tools for the Example Walkthroughs](policy-eval-walkthrough-download-awscli.mdx)\. 
 
-1. Save the administrator user credentials, also referred to as profiles\. You can use the profile name instead of specifying credentials for each command you enter\. For more information, see [Setting Up the Tools for the Example Walkthroughs](policy-eval-walkthrough-download-awscli.md)\. 
+1. Save the administrator user credentials, also referred to as profiles\. You can use the profile name instead of specifying credentials for each command you enter\. For more information, see [Setting Up the Tools for the Example Walkthroughs](policy-eval-walkthrough-download-awscli.mdx)\. 
 
    1. Add profiles in the AWS CLI credentials file for each of the administrator users in the two accounts\. 
 
@@ -193,7 +193,7 @@ Now Dave in Account B can list the contents of `examplebucket` owned by Account 
 
 **Test Using the AWS CLI**
 
-1. Add the UserDave profile to the AWS CLI config file\. For more information about the config file, see [Setting Up the Tools for the Example Walkthroughs](policy-eval-walkthrough-download-awscli.md)\.
+1. Add the UserDave profile to the AWS CLI config file\. For more information about the config file, see [Setting Up the Tools for the Example Walkthroughs](policy-eval-walkthrough-download-awscli.mdx)\.
 
    ```
    [profile UserDave]

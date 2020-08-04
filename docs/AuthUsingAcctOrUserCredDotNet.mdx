@@ -4,7 +4,7 @@ To send authenticated requests using your AWS account or IAM user credentials:
 + Create an instance of the `AmazonS3Client` class\. 
 + Execute one of the `AmazonS3Client` methods to send requests to Amazon S3\. The client generates the necessary signature from the credentials that you provide and includes it in the request it sends to Amazon S3\. 
 
-The following C\# example shows how to perform the preceding tasks\. For information about running the \.NET examples in this guide and for instructions on how to store your credentials in a configuration file, see [Running the Amazon S3 \.NET Code Examples](UsingTheMPDotNetAPI.md#TestingDotNetApiSamples)\.
+The following C\# example shows how to perform the preceding tasks\. For information about running the \.NET examples in this guide and for instructions on how to store your credentials in a configuration file, see [Running the Amazon S3 \.NET Code Examples](UsingTheMPDotNetAPI.mdx#TestingDotNetApiSamples)\.
 
 **Example**  
 
@@ -79,9 +79,9 @@ namespace Amazon.DocSamples.S3
 **Note**  
 You can create the `AmazonS3Client` client without providing your security credentials\. Requests sent using this client are anonymous requests, without a signature\. Amazon S3 returns an error if you send anonymous requests for a resource that is not publicly available\.
 
-For working examples, see [Working with Amazon S3 Objects](UsingObjects.md) and [Working with Amazon S3 Buckets](UsingBucket.md)\. You can test these examples using your AWS Account or an IAM user credentials\. 
+For working examples, see [Working with Amazon S3 Objects](UsingObjects.mdx) and [Working with Amazon S3 Buckets](UsingBucket.mdx)\. You can test these examples using your AWS Account or an IAM user credentials\. 
 
-For example, to list all the object keys in your bucket, see [Listing Keys Using the AWS SDK for \.NET](ListingObjectKeysUsingNetSDK.md)\. 
+For example, to list all the object keys in your bucket, see [Listing Keys Using the AWS SDK for \.NET](ListingObjectKeysUsingNetSDK.mdx)\. 
 
 ## Related Resources<a name="RelatedResources003"></a>
-+ [Using the AWS SDKs, CLI, and Explorers](UsingAWSSDK.md)
++ [Using the AWS SDKs, CLI, and Explorers](UsingAWSSDK.mdx)

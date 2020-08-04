@@ -9,7 +9,7 @@ Bucket policies are limited to 20 KB in size\.
 
 In its most basic sense, a policy contains the following elements:
 + **Resources** – Buckets and objects are the Amazon S3 resources for which you can allow or deny permissions\. In a policy, you use the Amazon Resource Name \(ARN\) to identify the resource\. 
-+ **Actions** – For each resource, Amazon S3 supports a set of operations\. You identify resource operations that you will allow \(or deny\) by using action keywords \(see [Specifying Permissions in a Policy](using-with-s3-actions.md)\)\. 
++ **Actions** – For each resource, Amazon S3 supports a set of operations\. You identify resource operations that you will allow \(or deny\) by using action keywords \(see [Specifying Permissions in a Policy](using-with-s3-actions.mdx)\)\. 
 
   For example, the `s3:ListBucket` permission allows the user permission to the Amazon S3 [GET Bucket \(List Objects\)](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGET.html) operation\. 
 + **Effect** – What the effect will be when the user requests the specific action—this can be either allow or deny\. 
@@ -45,11 +45,11 @@ The following example bucket policy shows the preceding common policy elements\.
 ```
 
 For more information about the access policy elements, see the following topics:
-+ [Specifying Resources in a Policy](s3-arn-format.md)
-+ [Specifying a Principal in a Policy](s3-bucket-user-policy-specifying-principal-intro.md)
-+ [Specifying Permissions in a Policy](using-with-s3-actions.md)
-+ [Specifying Conditions in a Policy](amazon-s3-policy-keys.md)
++ [Specifying Resources in a Policy](s3-arn-format.mdx)
++ [Specifying a Principal in a Policy](s3-bucket-user-policy-specifying-principal-intro.mdx)
++ [Specifying Permissions in a Policy](using-with-s3-actions.mdx)
++ [Specifying Conditions in a Policy](amazon-s3-policy-keys.mdx)
 
 The following topics provide additional policy examples:
-+ [Bucket Policy Examples](example-bucket-policies.md)
-+ [User Policy Examples](example-policies-s3.md)
++ [Bucket Policy Examples](example-bucket-policies.mdx)
++ [User Policy Examples](example-policies-s3.mdx)

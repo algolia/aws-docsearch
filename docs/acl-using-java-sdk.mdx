@@ -1,6 +1,6 @@
 # Managing ACLs Using the AWS SDK for Java<a name="acl-using-java-sdk"></a>
 
-This section provides examples of how to configure access control list \(ACL\) grants on buckets and objects\. The first example creates a bucket with a canned ACL \(see [Canned ACL](acl-overview.md#canned-acl)\), creates a list of custom permission grants, and then replaces the canned ACL with an ACL containing the custom grants\. The second example shows how to modify an ACL using the `AccessControlList.grantPermission()` method\.
+This section provides examples of how to configure access control list \(ACL\) grants on buckets and objects\. The first example creates a bucket with a canned ACL \(see [Canned ACL](acl-overview.mdx#canned-acl)\), creates a list of custom permission grants, and then replaces the canned ACL with an ACL containing the custom grants\. The second example shows how to modify an ACL using the `AccessControlList.grantPermission()` method\.
 
 ## Setting ACL Grants<a name="set-acl-java-create-resource"></a>
 
@@ -76,7 +76,7 @@ public class CreateBucketWithACL {
 This example updates the ACL on an object\. The example performs the following tasks:   
 + Retrieves an object's ACL
 + Clears the ACL by removing all existing permissions
-+ Adds two permissions: full access to the owner, and WRITE\_ACP \(see [What Permissions Can I Grant?](acl-overview.md#permissions)\) to a user identified by an email address
++ Adds two permissions: full access to the owner, and WRITE\_ACP \(see [What Permissions Can I Grant?](acl-overview.mdx#permissions)\) to a user identified by an email address
 + Saves the ACL to the object
 
 ```

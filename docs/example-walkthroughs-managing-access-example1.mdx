@@ -17,7 +17,7 @@ The following steps summarize the walkthrough:
 
 1. User then tries permissions granted via both the bucket policy and the user policy\.
 
-For this example, you will need an AWS account\. Instead of using the root credentials of the account, you will create an administrator user \(see [About Using an Administrator User to Create Resources and Grant Permissions](example-walkthroughs-managing-access.md#about-using-root-credentials)\)\. We refer to the AWS account and the administrator user as follows:
+For this example, you will need an AWS account\. Instead of using the root credentials of the account, you will create an administrator user \(see [About Using an Administrator User to Create Resources and Grant Permissions](example-walkthroughs-managing-access.mdx#about-using-root-credentials)\)\. We refer to the AWS account and the administrator user as follows:
 
 
 | Account ID | Account Referred To As | Administrator User in the Account | 
@@ -54,7 +54,7 @@ All the tasks of creating users and granting permissions are done in the AWS Man
    + If using the AWS CLI, create a profile, AccountAadmin, in the config file\.
    + If using the AWS Tools for Windows PowerShell, make sure you store credentials for the session as AccountAadmin\.
 
-   For instructions, see [Setting Up the Tools for the Example Walkthroughs](policy-eval-walkthrough-download-awscli.md)\. 
+   For instructions, see [Setting Up the Tools for the Example Walkthroughs](policy-eval-walkthrough-download-awscli.mdx)\. 
 
 ## Step 1: Create Resources \(a Bucket and an IAM User\) in Account A and Grant Permissions<a name="grant-permissions-to-user-in-your-account-step1"></a>
 
@@ -84,7 +84,7 @@ Using the credentials of user AccountAadmin in Account A, and the special IAM us
       + The first statement grants Dave the bucket operation permissions `s3:GetBucketLocation` and `s3:ListBucket`\.
       + The second statement grants the `s3:GetObject` permission\. Because Account A also owns the object, the account administrator is able to grant the `s3:GetObject` permission\. 
 
-      In the `Principal` statement, Dave is identified by his user ARN\. For more information about policy elements, see [Access Policy Language Overview](access-policy-language-overview.md)\.
+      In the `Principal` statement, Dave is identified by his user ARN\. For more information about policy elements, see [Access Policy Language Overview](access-policy-language-overview.mdx)\.
 
       ```
       {
@@ -149,7 +149,7 @@ Using Dave's credentials, verify that the permissions work\. You can use either 
 
 **Test Using the AWS CLI**
 
-1. Update the AWS CLI config file by adding the following UserDaveAccountA profile\. For more information, see [Setting Up the Tools for the Example Walkthroughs](policy-eval-walkthrough-download-awscli.md)\.
+1. Update the AWS CLI config file by adding the following UserDaveAccountA profile\. For more information, see [Setting Up the Tools for the Example Walkthroughs](policy-eval-walkthrough-download-awscli.mdx)\.
 
    ```
    [profile UserDaveAccountA]

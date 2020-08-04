@@ -7,10 +7,10 @@ On the website endpoint, if a user requests an object that doesn't exist, Amazon
 
 ## Edit Block Public Access Settings<a name="block-public-access-static-site"></a>
 
-By default Amazon S3 does not allow public access to your account or buckets\. If you want to configure an existing bucket as a static website that has public access, you must edit block public access settings for that bucket\. You may also have to edit your account\-level block public access settings\. Amazon S3 applies the most restrictive combination of the bucket\-level and account\-level block public access settings\. For example, if you allow public access for a bucket but block all public access at the account level, Amazon S3 will continue to block public access to the bucket\. In this scenario, you would have to edit your bucket\-level and account\-level block public access settings\. For more information, see [Using Amazon S3 Block Public Access](access-control-block-public-access.md)\.
+By default Amazon S3 does not allow public access to your account or buckets\. If you want to configure an existing bucket as a static website that has public access, you must edit block public access settings for that bucket\. You may also have to edit your account\-level block public access settings\. Amazon S3 applies the most restrictive combination of the bucket\-level and account\-level block public access settings\. For example, if you allow public access for a bucket but block all public access at the account level, Amazon S3 will continue to block public access to the bucket\. In this scenario, you would have to edit your bucket\-level and account\-level block public access settings\. For more information, see [Using Amazon S3 Block Public Access](access-control-block-public-access.mdx)\.
 
 **Important**  
-Before you turn off block public access, confirm that you want anyone on the internet to be able to access your bucket\. We recommend that you block all public access to your buckets unless you require a public bucket for a specific use case, such as a public static website\. If you only want certain users on your account to access your static website, you can edit your block public access settings rather than disabling block public access\. For more information, see [Using Amazon S3 Block Public Access](access-control-block-public-access.md)\.
+Before you turn off block public access, confirm that you want anyone on the internet to be able to access your bucket\. We recommend that you block all public access to your buckets unless you require a public bucket for a specific use case, such as a public static website\. If you only want certain users on your account to access your static website, you can edit your block public access settings rather than disabling block public access\. For more information, see [Using Amazon S3 Block Public Access](access-control-block-public-access.mdx)\.
 
 1. Open the Amazon S3 console at [https://console\.aws\.amazon\.com/s3/](https://console.aws.amazon.com/s3/)\.
 
@@ -27,7 +27,7 @@ Before you turn off block public access, confirm that you want anyone on the int
 
 ## Add a Bucket Policy<a name="bucket-policy-static-site"></a>
 
-To make the objects in your bucket publicly readable, you must write a bucket policy that grants everyone `s3:GetObject` permission\. The following sample bucket policy grants everyone access to the objects in the specified folder\. Before you add a bucket policy that grants public read access to a bucket, confirm that you have disabled block public access for the bucket\. To use the following bucket policy, update the `Resource` to match your bucket\. For more information about bucket policies, see [Using Bucket Policies and User Policies](using-iam-policies.md)\.
+To make the objects in your bucket publicly readable, you must write a bucket policy that grants everyone `s3:GetObject` permission\. The following sample bucket policy grants everyone access to the objects in the specified folder\. Before you add a bucket policy that grants public read access to a bucket, confirm that you have disabled block public access for the bucket\. To use the following bucket policy, update the `Resource` to match your bucket\. For more information about bucket policies, see [Using Bucket Policies and User Policies](using-iam-policies.mdx)\.
 
 ```
  1. {
@@ -60,7 +60,7 @@ To make the objects in your bucket publicly readable, you must write a bucket po
 
 You can use a bucket policy to grant public read permission to your objects\. However, the bucket policy applies only to objects that are owned by the bucket owner\. If your bucket contains objects that aren't owned by the bucket owner, the bucket owner should use the object access control list \(ACL\) to grant public READ permission on those objects\.
 
-To make an object publicly readable using an ACL, grant READ permission to the `AllUsers` group, as shown in the following grant element\. Add this grant element to the object ACL\. For information about managing ACLs, see [Managing Access with ACLs](S3_ACLs_UsingACLs.md)\.
+To make an object publicly readable using an ACL, grant READ permission to the `AllUsers` group, as shown in the following grant element\. Add this grant element to the object ACL\. For information about managing ACLs, see [Managing Access with ACLs](S3_ACLs_UsingACLs.mdx)\.
 
 ```
 1. <Grant>

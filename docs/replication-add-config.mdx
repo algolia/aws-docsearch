@@ -15,7 +15,7 @@ Amazon S3 stores a replication configuration as XML\. In the replication configu
 </ReplicationConfiguration>
 ```
 
-Amazon S3 can't replicate objects without your permission\. You grant permissions with the IAM role that you specify in the replication configuration\. Amazon S3 assumes the IAM role to replicate objects on your behalf\. You must grant the required permissions to the IAM role first\. For more information about managing permissions, see [Setting Up Permissions for Replication](setting-repl-config-perm-overview.md)\.
+Amazon S3 can't replicate objects without your permission\. You grant permissions with the IAM role that you specify in the replication configuration\. Amazon S3 assumes the IAM role to replicate objects on your behalf\. You must grant the required permissions to the IAM role first\. For more information about managing permissions, see [Setting Up Permissions for Replication](setting-repl-config-perm-overview.mdx)\.
 
 You add one rule in replication configuration in the following scenarios:
 + You want to replicate all objects\.
@@ -167,7 +167,7 @@ You can add the following options in the `<Destination>` element:
   ...
   ```
 
-  If you don't add this element to the replication configuration, the replicas are owned by the same AWS account that owns the source object\. For more information, see [Changing the Replica Owner](replication-change-owner.md)\.
+  If you don't add this element to the replication configuration, the replicas are owned by the same AWS account that owns the source object\. For more information, see [Changing the Replica Owner](replication-change-owner.mdx)\.
 + You can enable S3 Replication Time Control \(S3 RTC\) in your replication configuration\. S3 RTC replicates most objects in seconds and 99\.99 percent of objects within 15 minutes \(backed by a service level agreement\)\. 
 **Note**  
 Only a valid value of `<Minutes>15</Minutes>` is accepted for `EventThreshold` and `Time`\.
@@ -194,7 +194,7 @@ Only a valid value of `<Minutes>15</Minutes>` is accepted for `EventThreshold` a
   ...
   ```
 
-  For more information, see [Replicating Objects Using S3 Replication Time Control \(S3 RTC\)](replication-time-control.md)\. For API examples, see [PutBucketReplication](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketReplication.html) in the *Amazon Simple Storage Service API Reference*\.
+  For more information, see [Replicating Objects Using S3 Replication Time Control \(S3 RTC\)](replication-time-control.mdx)\. For API examples, see [PutBucketReplication](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketReplication.html) in the *Amazon Simple Storage Service API Reference*\.
 + Your source bucket might contain objects that were created with server\-side encryption using keys stored in AWS KMS\. By default, Amazon S3 doesn't replicate these objects\. You can optionally direct Amazon S3 to replicate these objects\. First, explicitly opt into this feature by adding the `SourceSelectionCriteria` element, and then provide the AWS KMS CMK \(for the AWS Region of the destination bucket\) to use for encrypting object replicas\. 
 
   ```
@@ -213,7 +213,7 @@ Only a valid value of `<Minutes>15</Minutes>` is accepted for `EventThreshold` a
   ...
   ```
 
-  For more information, see [Replicating Objects Created with Server\-Side Encryption \(SSE\) Using Encryption Keys Stored in AWS KMS](replication-config-for-kms-objects.md)\.
+  For more information, see [Replicating Objects Created with Server\-Side Encryption \(SSE\) Using Encryption Keys Stored in AWS KMS](replication-config-for-kms-objects.mdx)\.
 
 ## Example Replication Configurations<a name="replication-config-example-configs"></a>
 
@@ -403,7 +403,7 @@ In this configuration, the two rules specify filters with overlapping key prefix
 ```
 
 **Example 4: Example Walkthroughs**  
-For example walkthroughs, see [Replication Walkthroughs](replication-example-walkthroughs.md)\.
+For example walkthroughs, see [Replication Walkthroughs](replication-example-walkthroughs.mdx)\.
 
 For more information about the XML structure of replication configuration, see [PutBucketReplication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) in the *Amazon Simple Storage Service API Reference*\. 
 

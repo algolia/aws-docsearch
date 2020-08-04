@@ -6,7 +6,7 @@ To enable object replication, you add a replication configuration to your source
 + The destination bucket where you want Amazon S3 to replicate objects 
 + An AWS Identity and Access Management \(IAM\)  role that Amazon S3 can assume to replicate objects on your behalf 
 
-Additional configuration options are available\. For more information, see [Additional Replication Configurations](replication-additional-configs.md)\.
+Additional configuration options are available\. For more information, see [Additional Replication Configurations](replication-additional-configs.mdx)\.
 
 ## Types of Object Replication<a name="replication-types"></a>
 
@@ -26,7 +26,7 @@ Replication can help you do the following:
 + **Maintain object copies under different ownership** — Regardless of who owns the source object, you can tell Amazon S3 to change replica ownership to the AWS account that owns the destination bucket\. This is referred to as the *owner override* option\. You can use this option to restrict access to object replicas\.
 
    
-+ **Replicate objects within 15 minutes** — You can use S3 Replication Time Control \(S3 RTC\) to replicate your data in the same AWS Region or across different Regions in a predictable time frame\. S3 RTC replicates 99\.99 percent of new objects stored in Amazon S3 within 15 minutes \(backed by a service level agreement\)\. For more information, see [Replicating Objects Using S3 Replication Time Control \(S3 RTC\)](replication-time-control.md)\.
++ **Replicate objects within 15 minutes** — You can use S3 Replication Time Control \(S3 RTC\) to replicate your data in the same AWS Region or across different Regions in a predictable time frame\. S3 RTC replicates 99\.99 percent of new objects stored in Amazon S3 within 15 minutes \(backed by a service level agreement\)\. For more information, see [Replicating Objects Using S3 Replication Time Control \(S3 RTC\)](replication-time-control.mdx)\.
 
 ## When to Use CRR<a name="crr-scenario"></a>
 
@@ -56,14 +56,14 @@ Replication requires the following:
 + The source bucket owner must have the source and destination AWS Regions enabled for their account\. The destination bucket owner must have the destination Region\-enabled for their account\. For more information about enabling or disabling an AWS Region, see [AWS Service Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the *AWS General Reference*\.
 + Both source and destination buckets must have versioning enabled\. 
 + Amazon S3 must have permissions to replicate objects from the source bucket to the destination bucket on your behalf\. 
-+ If the owner of the source bucket doesn't own the object in the bucket, the object owner must grant the bucket owner `READ` and `READ_ACP` permissions with the object access control list \(ACL\)\. For more information, see [Managing Access with ACLs](S3_ACLs_UsingACLs.md)\. 
-+ If the source bucket has Amazon S3 object lock enabled, the destination bucket must also have object lock enabled\. For more information, see [Locking Objects Using Amazon S3 Object Lock](object-lock.md)\.
++ If the owner of the source bucket doesn't own the object in the bucket, the object owner must grant the bucket owner `READ` and `READ_ACP` permissions with the object access control list \(ACL\)\. For more information, see [Managing Access with ACLs](S3_ACLs_UsingACLs.mdx)\. 
++ If the source bucket has Amazon S3 object lock enabled, the destination bucket must also have object lock enabled\. For more information, see [Locking Objects Using Amazon S3 Object Lock](object-lock.mdx)\.
 
   To enable replication on a bucket that has object lock enabled, contact [AWS Support](https://console.aws.amazon.comsupport/home)\.
 
-For more information, see [Overview of Setting Up Replication](replication-how-setup.md)\. 
+For more information, see [Overview of Setting Up Replication](replication-how-setup.mdx)\. 
 
 If you are setting the replication configuration in a *cross\-account scenario*, where source and destination buckets are owned by different AWS accounts, the following additional requirement applies:
-+ The owner of the destination bucket must grant the owner of the source bucket permissions to replicate objects with a bucket policy\. For more information, see [Granting Permissions When Source and Destination Buckets Are Owned by Different AWS Accounts](setting-repl-config-perm-overview.md#setting-repl-config-crossacct)\.
++ The owner of the destination bucket must grant the owner of the source bucket permissions to replicate objects with a bucket policy\. For more information, see [Granting Permissions When Source and Destination Buckets Are Owned by Different AWS Accounts](setting-repl-config-perm-overview.mdx#setting-repl-config-crossacct)\.
 
    

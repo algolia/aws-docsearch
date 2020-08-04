@@ -93,7 +93,7 @@ The following example policy statement configures a VPC endpoint to allow calls 
 ```
 
 **Note**  
-The `"Resource"` declaration in this example uses an Amazon Resource Name \(ARN\) to specify the access point\. For more information about access point ARNs, see [Using Access Points](using-access-points.md)\. 
+The `"Resource"` declaration in this example uses an Amazon Resource Name \(ARN\) to specify the access point\. For more information about access point ARNs, see [Using Access Points](using-access-points.mdx)\. 
 
 For more information about VPC endpoint policies, see [Using Endpoint Policies for Amazon S3](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-s3.html#vpc-endpoints-policies-s3) in the *Amazon Virtual Private Cloud User Guide*\.
 
@@ -101,7 +101,7 @@ For more information about VPC endpoint policies, see [Using Endpoint Policies f
 
 Amazon S3 access points support independent *block public access* settings for each access point\. When you create an access point, you can specify block public access settings that apply to that access point\. For any request made through an access point, Amazon S3 evaluates the block public access settings for that access point, the underlying bucket, and the bucket owner's account\. If any of these settings indicate that the request should be blocked, Amazon S3 rejects the request\.
 
-For more information about the S3 Block Public Access feature, see [Using Amazon S3 Block Public Access](access-control-block-public-access.md)\.
+For more information about the S3 Block Public Access feature, see [Using Amazon S3 Block Public Access](access-control-block-public-access.mdx)\.
 
 **Important**  
 All block public access settings are enabled by default for access points\. You must explicitly disable any settings that you don't want to apply to an access point\.
@@ -176,7 +176,7 @@ This is a string operator that you can use to match on the network origin, eithe
 }
 ```
 
-For more information about using condition keys with Amazon S3, see [Specifying Conditions in a Policy](amazon-s3-policy-keys.md)\.
+For more information about using condition keys with Amazon S3, see [Specifying Conditions in a Policy](amazon-s3-policy-keys.mdx)\.
 
 ***Examples***
 

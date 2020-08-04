@@ -2,8 +2,8 @@
 
 **Topics**
 + [Related Topics](#access-control-how-s3-evaluates-related-topics)
-+ [How Amazon S3 Authorizes a Request for a Bucket Operation](access-control-auth-workflow-bucket-operation.md)
-+ [How Amazon S3 Authorizes a Request for an Object Operation](access-control-auth-workflow-object-operation.md)
++ [How Amazon S3 Authorizes a Request for a Bucket Operation](access-control-auth-workflow-bucket-operation.mdx)
++ [How Amazon S3 Authorizes a Request for an Object Operation](access-control-auth-workflow-object-operation.mdx)
 
 When Amazon S3 receives a request—for example, a bucket or an object operation—it first verifies that the requester has the necessary permissions\. Amazon S3 evaluates all the relevant access policies, user policies, and resource\-based policies \(bucket policy, bucket ACL, object ACL\) in deciding whether to authorize the request\. The following are some of the example scenarios: 
 +  If the requester is an IAM principal, Amazon S3 must determine if the parent AWS account to which the principal belongs has granted the principal necessary permission to perform the operation\. In addition, if the request is for a bucket operation, such as a request to list the bucket content, Amazon S3 must verify that the bucket owner has granted permission for the requester to perform the operation\. 
@@ -34,11 +34,11 @@ In order to determine whether the requester has permission to perform the specif
    1. **Object context** – If the request is for an object, Amazon S3 evaluates the subset of policies owned by the object owner\. 
 
  The following sections describe in detail and provide examples:
-+ [How Amazon S3 Authorizes a Request for a Bucket Operation ](access-control-auth-workflow-bucket-operation.md)
-+ [How Amazon S3 Authorizes a Request for an Object Operation ](access-control-auth-workflow-object-operation.md)
++ [How Amazon S3 Authorizes a Request for a Bucket Operation ](access-control-auth-workflow-bucket-operation.mdx)
++ [How Amazon S3 Authorizes a Request for an Object Operation ](access-control-auth-workflow-object-operation.mdx)
 
 ## Related Topics<a name="access-control-how-s3-evaluates-related-topics"></a>
 
-We recommend you first review the introductory topics that explain the options for managing access to your Amazon S3 resources\. For more information, see [Introduction to Managing Access to Amazon S3 Resources](s3-access-control.md#intro-managing-access-s3-resources)\. You can then use the following topics for more information about specific access policy options\. 
-+  [Using Bucket Policies and User Policies](using-iam-policies.md) 
-+  [Managing Access with ACLs](S3_ACLs_UsingACLs.md) 
+We recommend you first review the introductory topics that explain the options for managing access to your Amazon S3 resources\. For more information, see [Introduction to Managing Access to Amazon S3 Resources](s3-access-control.mdx#intro-managing-access-s3-resources)\. You can then use the following topics for more information about specific access policy options\. 
++  [Using Bucket Policies and User Policies](using-iam-policies.mdx) 
++  [Managing Access with ACLs](S3_ACLs_UsingACLs.mdx) 

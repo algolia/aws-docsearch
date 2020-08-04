@@ -186,12 +186,12 @@ To set up replication configuration when both source and destination buckets are
 
    1. Add sample objects to the `Tax` folder in the *source* bucket\. 
 **Note**  
-The amount of time it takes for Amazon S3 to replicate an object depends on the size of the object\. For information about how to see the status of replication, see [Replication Status Information](replication-status.md)\.
+The amount of time it takes for Amazon S3 to replicate an object depends on the size of the object\. For information about how to see the status of replication, see [Replication Status Information](replication-status.mdx)\.
 
       In the *destination* bucket, verify the following:
       + That Amazon S3 replicated the objects\.
       + In object **properties**, that the **Replication Status** is set to `Replica` \(identifying this as a replica object\)\.
-      + In object **properties**, that the permission section shows no permissions\. This means that the replica is still owned by the *source* bucket owner, and the *destination* bucket owner has no permission on the object replica\. You can add optional configuration to tell Amazon S3 to change the replica ownership\. For an example, see [Example 3: Changing the Replica Owner When the Source and Destination Buckets Are Owned by Different Accounts](replication-walkthrough-3.md)\.   
+      + In object **properties**, that the permission section shows no permissions\. This means that the replica is still owned by the *source* bucket owner, and the *destination* bucket owner has no permission on the object replica\. You can add optional configuration to tell Amazon S3 to change the replica ownership\. For an example, see [Example 3: Changing the Replica Owner When the Source and Destination Buckets Are Owned by Different Accounts](replication-walkthrough-3.mdx)\.   
 ![\[Screen shot of object properties showing the replication status and permissions.\]](http://docs.aws.amazon.com/AmazonS3/latest/dev/images/crr-wt2-10.png)
 
    1. Update an object's ACL in the *source* bucket and verify that changes appear in the *destination* bucket\.
@@ -205,7 +205,7 @@ Use the following code examples to add a replication configuration to a bucket w
 ------
 #### [ Java ]
 
-The following example adds a replication configuration to a bucket and then retrieves and verifies the configuration\. For instructions on creating and testing a working sample, see [Testing the Amazon S3 Java Code Examples](UsingTheMPJavaAPI.md#TestingJavaSamples)\. 
+The following example adds a replication configuration to a bucket and then retrieves and verifies the configuration\. For instructions on creating and testing a working sample, see [Testing the Amazon S3 Java Code Examples](UsingTheMPJavaAPI.mdx#TestingJavaSamples)\. 
 
 ```
 import com.amazonaws.AmazonServiceException;
@@ -370,7 +370,7 @@ public class CrossRegionReplication {
 ------
 #### [ C\# ]
 
-The following AWS SDK for \.NET code example adds a replication configuration to a bucket and then retrieves it\. To use this code, provide the names for your buckets and the Amazon Resource Name \(ARN\) for your IAM role\. For instructions on how to create and test a working sample, see [Running the Amazon S3 \.NET Code Examples](UsingTheMPDotNetAPI.md#TestingDotNetApiSamples)\.
+The following AWS SDK for \.NET code example adds a replication configuration to a bucket and then retrieves it\. To use this code, provide the names for your buckets and the Amazon Resource Name \(ARN\) for your IAM role\. For instructions on how to create and test a working sample, see [Running the Amazon S3 \.NET Code Examples](UsingTheMPDotNetAPI.mdx#TestingDotNetApiSamples)\.
 
 ```
 using Amazon.S3;

@@ -11,11 +11,11 @@ Server access logs do not log information regarding wrong\-region redirect error
 + [How Are Logs Delivered?](#how-logs-delivered)
 + [Best Effort Server Log Delivery](#LogDeliveryBestEffort)
 + [Bucket Logging Status Changes Take Effect Over Time](#BucketLoggingStatusChanges)
-+ [Enabling Logging Using the Console](enable-logging-console.md)
-+ [Enabling Logging Programmatically](enable-logging-programming.md)
-+ [Amazon S3 Server Access Log Format](LogFormat.md)
-+ [Deleting Amazon S3 Log Files](deleting-log-files-lifecycle.md)
-+ [Using Amazon S3 Access Logs to Identify Requests](using-s3-access-logs-to-identify-requests.md)
++ [Enabling Logging Using the Console](enable-logging-console.mdx)
++ [Enabling Logging Programmatically](enable-logging-programming.mdx)
++ [Amazon S3 Server Access Log Format](LogFormat.mdx)
++ [Deleting Amazon S3 Log Files](deleting-log-files-lifecycle.mdx)
++ [Using Amazon S3 Access Logs to Identify Requests](using-s3-access-logs-to-identify-requests.mdx)
 
 ## How to Enable Server Access Logging<a name="server-access-logging-overview"></a>
 
@@ -54,10 +54,10 @@ Both the source and target buckets must be owned by the same AWS account, and th
   logs/2013-11-01-21-32-16-E568B2907131C0C0
   ```
 
-   The key prefix can also help when you delete the logs\. For example, you can set a lifecycle configuration rule for Amazon S3 to delete objects with a specific key prefix\. For more information, see [Deleting Amazon S3 Log Files](deleting-log-files-lifecycle.md)\.
+   The key prefix can also help when you delete the logs\. For example, you can set a lifecycle configuration rule for Amazon S3 to delete objects with a specific key prefix\. For more information, see [Deleting Amazon S3 Log Files](deleting-log-files-lifecycle.mdx)\.
 +  \(Optional\) Permissions so that others can access the generated logs\. By default, the bucket owner always has full access to the log objects\. You can optionally grant access to other users\. 
 
-For more information about enabling server access logging, see [Enabling Logging Using the Console](enable-logging-console.md) and [Enabling Logging Programmatically](enable-logging-programming.md)\. 
+For more information about enabling server access logging, see [Enabling Logging Using the Console](enable-logging-console.mdx) and [Enabling Logging Programmatically](enable-logging-programming.mdx)\. 
 
 ### Additional logging considerations<a name="additional-logging-considerations"></a>
 

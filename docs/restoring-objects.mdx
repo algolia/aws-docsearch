@@ -4,7 +4,7 @@ title: Restoring Archived Objects
 ---
 # Restoring Archived Objects<a name="restoring-objects"></a>
 
-Objects that you archive to the GLACIER or DEEP ARCHIVE storage classes are not accessible in real time\. You must first initiate a restore request, and then wait until a temporary copy of the object is available for the duration \(number of days\) that you specify in the request\. For more information about how the GLACIER, DEEP ARCHIVE, and other Amazon S3 storage classes compare, see [Amazon S3 Storage Classes](storage-class-intro.md)\. 
+Objects that you archive to the GLACIER or DEEP ARCHIVE storage classes are not accessible in real time\. You must first initiate a restore request, and then wait until a temporary copy of the object is available for the duration \(number of days\) that you specify in the request\. For more information about how the GLACIER, DEEP ARCHIVE, and other Amazon S3 storage classes compare, see [Amazon S3 Storage Classes](storage-class-intro.mdx)\. 
 
 Amazon S3 restores a temporary copy of the object only for the specified duration\. After that, it deletes the restored object copy\. You can modify the expiration period of a restored copy by reissuing a restore\. In this case, Amazon S3 updates the expiration period relative to the current time\. 
 
@@ -12,27 +12,27 @@ Amazon S3 calculates the expiration time of the restored object copy by adding t
 
 After you receive a temporary copy of the restored object, the object's storage class remains GLACIER or DEEP ARCHIVE\. \(A [HEAD Object](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectHEAD.html) or the [GET Object](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTObjectGET.html) API operations request returns GLACIER or DEEP ARCHIVE as the storage class\.\) 
 
-The time it takes a restore job to finish depends on which archive storage class you use and which retrieval option you specify: `Expedited` \(only available for GLACIER\), `Standard`, or `Bulk`\. You can be notified when your restore is complete using Amazon S3 event notifications\. For more information, see [ Configuring Amazon S3 Event Notifications](NotificationHowTo.md)\.
+The time it takes a restore job to finish depends on which archive storage class you use and which retrieval option you specify: `Expedited` \(only available for GLACIER\), `Standard`, or `Bulk`\. You can be notified when your restore is complete using Amazon S3 event notifications\. For more information, see [ Configuring Amazon S3 Event Notifications](NotificationHowTo.mdx)\.
 
 You can restore an object copy for any number of days\. However you should restore objects only for the duration that you need because of the storage costs associated with the object copy\. When you restore an archive, you pay for both the archive \(at the GLACIER or DEEP ARCHIVE rate\) and a copy that you restored temporarily \(Reduced Redundancy Storage \(RRS\) or Standard, whichever is the lower cost storage in the region\)\. For information about pricing, see [Amazon S3 Pricing](https://aws.amazon.com/s3/pricing/)\.
 
 When required, you can restore large segments of the data stored in the GLACIER and DEEP ARCHIVE storage classes\. For example, you might want to restore data for a secondary copy\. However, if you need to restore a large amount of data, keep in mind that the GLACIER and DEEP ARCHIVE storage classes are designed for 35 random restore requests per pebibyte \(PiB\) stored per day\.
 
-For information about using lifecycle transitions to move objects to the GLACIER or DEEP ARCHIVE storage classes, see [Transitioning to the GLACIER and DEEP ARCHIVE Storage Classes \(Object Archival\)](lifecycle-transition-general-considerations.md#before-deciding-to-archive-objects)\.
+For information about using lifecycle transitions to move objects to the GLACIER or DEEP ARCHIVE storage classes, see [Transitioning to the GLACIER and DEEP ARCHIVE Storage Classes \(Object Archival\)](lifecycle-transition-general-considerations.mdx#before-deciding-to-archive-objects)\.
 
 To restore more than one Amazon S3 object with a single request, you can use Amazon S3 batch operations\. You provide Amazon S3 batch operations with a list of objects to operate on\. Amazon S3 batch operations call the respective API to perform the specified operation\. A single Amazon S3 batch operations job can perform the specified operation on billions of objects containing exabytes of data\. 
 
-Amazon S3 batch operations track progress, send notifications, and store a detailed completion report of all actions, providing a fully managed, auditable, serverless experience\. You can use Amazon S3 batch operations through the AWS Management Console, AWS CLI, AWS SDKs, or REST API\. For more information, see [The Basics: Amazon S3 Batch Operations Jobs](batch-ops-basics.md)\.
+Amazon S3 batch operations track progress, send notifications, and store a detailed completion report of all actions, providing a fully managed, auditable, serverless experience\. You can use Amazon S3 batch operations through the AWS Management Console, AWS CLI, AWS SDKs, or REST API\. For more information, see [The Basics: Amazon S3 Batch Operations Jobs](batch-ops-basics.mdx)\.
 
 The following sections provide more information about restoring objects\.
 
 **Topics**
 + [Archive Retrieval Options](#restoring-objects-retrieval-options)
 + [Upgrading the Speed of an In\-Progress Restore](#restoring-objects-upgrade-tier)
-+ [Restore an Archived Object Using the Amazon S3 Console](restoring-objects-console.md)
-+ [Restore an Archived Object Using the AWS SDK for Java](restoring-objects-java.md)
-+ [Restore an Archived Object Using the AWS SDK for \.NET](restore-object-dotnet.md)
-+ [Restore an Archived Object Using the REST API](restoring-objects-rest.md)
++ [Restore an Archived Object Using the Amazon S3 Console](restoring-objects-console.mdx)
++ [Restore an Archived Object Using the AWS SDK for Java](restoring-objects-java.mdx)
++ [Restore an Archived Object Using the AWS SDK for \.NET](restore-object-dotnet.mdx)
++ [Restore an Archived Object Using the REST API](restoring-objects-rest.mdx)
 
 ## Archive Retrieval Options<a name="restoring-objects-retrieval-options"></a>
 

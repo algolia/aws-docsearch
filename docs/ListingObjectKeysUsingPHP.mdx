@@ -2,7 +2,7 @@
 
 This topic guides you through using classes from version 3 of the AWS SDK for PHP to list the object keys contained in an Amazon S3 bucket\. 
 
- This topic assumes that you are already following the instructions for [Using the AWS SDK for PHP and Running PHP Examples](UsingTheMPphpAPI.md) and have the AWS SDK for PHP properly installed\. 
+ This topic assumes that you are already following the instructions for [Using the AWS SDK for PHP and Running PHP Examples](UsingTheMPphpAPI.mdx) and have the AWS SDK for PHP properly installed\. 
 
 To list the object keys contained in a bucket using the AWS SDK for PHP you first must list the objects contained in the bucket and then extract the key from each of the listed objects\. When listing objects in a bucket you have the option of using the low\-level [Aws\\S3\\S3Client::listObjects\(\)](https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-s3-2006-03-01.html#listobjects) method or the high\-level [Aws\\ResultPaginator](https://docs.aws.amazon.com/aws-sdk-php/v3/api/class-Aws.ResultPaginator.html) class\. 
 
@@ -13,7 +13,7 @@ You can use the high\-level `ListObjects` paginator to make your task of listing
 The following tasks guide you through using the PHP Amazon S3 client methods to list the objects contained in a bucket from which you can list the object keys\.
 
 **Example of Listing Object Keys**  
-The following PHP example demonstrates how to list the keys from a specified bucket\. It shows how to use the high\-level `getIterator()` method to list the objects in a bucket and then how to extract the key from each of the objects in the list\. It also show how to use the low\-level `listObjects()` method to list the objects in a bucket and then how to extract the key from each of the objects in the list returned\. For information about running the PHP examples in this guide, go to [Running PHP Examples](UsingTheMPphpAPI.md#running-php-samples)\.   
+The following PHP example demonstrates how to list the keys from a specified bucket\. It shows how to use the high\-level `getIterator()` method to list the objects in a bucket and then how to extract the key from each of the objects in the list\. It also show how to use the low\-level `listObjects()` method to list the objects in a bucket and then how to extract the key from each of the objects in the list returned\. For information about running the PHP examples in this guide, go to [Running PHP Examples](UsingTheMPphpAPI.mdx#running-php-samples)\.   
 
 ```
  require 'vendor/autoload.php';

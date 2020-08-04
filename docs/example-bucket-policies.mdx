@@ -1,6 +1,6 @@
 # Bucket Policy Examples<a name="example-bucket-policies"></a>
 
-This section presents a few examples of typical use cases for bucket policies\. The policies use *bucket* and *examplebucket* strings in the resource value\. To test these policies, replace these strings with your bucket name\. For information about access policy language, see [Access Policy Language Overview](access-policy-language-overview.md)\.
+This section presents a few examples of typical use cases for bucket policies\. The policies use *bucket* and *examplebucket* strings in the resource value\. To test these policies, replace these strings with your bucket name\. For information about access policy language, see [Access Policy Language Overview](access-policy-language-overview.mdx)\.
 
 **Note**  
 Bucket policies are limited to 20 KB in size\.
@@ -8,7 +8,7 @@ Bucket policies are limited to 20 KB in size\.
 You can use the [AWS Policy Generator](http://aws.amazon.com/blogs/aws/aws-policy-generator/) to create a bucket policy for your Amazon S3 bucket\. You can then use the generated document to set your bucket policy by using the [Amazon S3 console](https://console.aws.amazon.com/s3/home), through several third\-party tools, or via your application\. 
 
 **Important**  
-When testing permissions using the Amazon S3 console, you will need to grant additional permissions that the console requires—`s3:ListAllMyBuckets`, `s3:GetBucketLocation`, and `s3:ListBucket` permissions\. For an example walkthrough that grants permissions to users and tests them using the console, see [Walkthrough: Controlling Access to a Bucket with User Policies](walkthrough1.md)\.
+When testing permissions using the Amazon S3 console, you will need to grant additional permissions that the console requires—`s3:ListAllMyBuckets`, `s3:GetBucketLocation`, and `s3:ListBucket` permissions\. For an example walkthrough that grants permissions to users and tests them using the console, see [Walkthrough: Controlling Access to a Bucket with User Policies](walkthrough1.mdx)\.
 
 **Topics**
 + [Granting Permissions to Multiple Accounts with Added Conditions](#example-bucket-policies-use-case-1)
@@ -19,11 +19,11 @@ When testing permissions using the Amazon S3 console, you will need to grant add
 + [Adding a Bucket Policy to Require MFA](#example-bucket-policies-use-case-7)
 + [Granting Cross\-Account Permissions to Upload Objects While Ensuring the Bucket Owner Has Full Control](#example-bucket-policies-use-case-8)
 + [Granting Permissions for Amazon S3 Inventory and Amazon S3 Analytics](#example-bucket-policies-use-case-9)
-+ [Example Bucket Policies for VPC Endpoints for Amazon S3](example-bucket-policies-vpc-endpoint.md)
++ [Example Bucket Policies for VPC Endpoints for Amazon S3](example-bucket-policies-vpc-endpoint.mdx)
 
 ## Granting Permissions to Multiple Accounts with Added Conditions<a name="example-bucket-policies-use-case-1"></a>
 
-The following example policy grants the `s3:PutObject` and `s3:PutObjectAcl` permissions to multiple AWS accounts and requires that any request for these operations include the `public-read` canned access control list \(ACL\)\. For more information, see [Specifying Permissions in a Policy](using-with-s3-actions.md) and [Specifying Conditions in a Policy](amazon-s3-policy-keys.md)\.
+The following example policy grants the `s3:PutObject` and `s3:PutObjectAcl` permissions to multiple AWS accounts and requires that any request for these operations include the `public-read` canned access control list \(ACL\)\. For more information, see [Specifying Permissions in a Policy](using-with-s3-actions.mdx) and [Specifying Conditions in a Policy](amazon-s3-policy-keys.mdx)\.
 
 ```
  1. {
@@ -43,7 +43,7 @@ The following example policy grants the `s3:PutObject` and `s3:PutObjectAcl` per
 
 ## Granting Read\-Only Permission to an Anonymous User<a name="example-bucket-policies-use-case-2"></a>
 
-The following example policy grants the `s3:GetObject` permission to any public anonymous users\. \(For a list of permissions and the operations that they allow, see [Specifying Permissions in a Policy](using-with-s3-actions.md)\.\) This permission allows anyone to read the object data, which is useful for when you configure your bucket as a website and want everyone to be able to read objects in the bucket\. Before you use a bucket policy to grant read\-only permission to an anonymous user, you must disable block public access settings for your bucket\. For more information, see [Permissions Required for Website Access](WebsiteAccessPermissionsReqd.md)\.
+The following example policy grants the `s3:GetObject` permission to any public anonymous users\. \(For a list of permissions and the operations that they allow, see [Specifying Permissions in a Policy](using-with-s3-actions.mdx)\.\) This permission allows anyone to read the object data, which is useful for when you configure your bucket as a website and want everyone to be able to read objects in the bucket\. Before you use a bucket policy to grant read\-only permission to an anonymous user, you must disable block public access settings for your bucket\. For more information, see [Permissions Required for Website Access](WebsiteAccessPermissionsReqd.mdx)\.
 
 ```
  1. {
@@ -61,7 +61,7 @@ The following example policy grants the `s3:GetObject` permission to any public 
 ```
 
 **Warning**  
-Use caution when granting anonymous access to your Amazon S3 bucket or disabling block public access settings\. When you grant anonymous access, anyone in the world can access your bucket\. We recommend that you never grant anonymous access to your Amazon S3 bucket unless you specifically need to, such as with [static website hosting](WebsiteHosting.md)\.
+Use caution when granting anonymous access to your Amazon S3 bucket or disabling block public access settings\. When you grant anonymous access, anyone in the world can access your bucket\. We recommend that you never grant anonymous access to your Amazon S3 bucket unless you specifically need to, such as with [static website hosting](WebsiteHosting.mdx)\.
 
 ## Restricting Access to Specific IP Addresses<a name="example-bucket-policies-use-case-3"></a>
 
@@ -69,7 +69,7 @@ The following example denies permissions to any user to perform any Amazon S3 op
 
 The condition in this statement identifies the 54\.240\.143\.\* as the range of allowed Internet Protocol version 4 \(IPv4\) IP addresses\. 
 
-The `Condition` block uses the `NotIpAddress` condition and the `aws:SourceIp` condition key, which is an AWS\-wide condition key\. For more information about these condition keys, see [Specifying Conditions in a Policy](amazon-s3-policy-keys.md)\. The `aws:SourceIp` IPv4 values use the standard CIDR notation\. For more information, see [IAM JSON Policy Elements Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#Conditions_IPAddress) in the *IAM User Guide*\. 
+The `Condition` block uses the `NotIpAddress` condition and the `aws:SourceIp` condition key, which is an AWS\-wide condition key\. For more information about these condition keys, see [Specifying Conditions in a Policy](amazon-s3-policy-keys.mdx)\. The `aws:SourceIp` IPv4 values use the standard CIDR notation\. For more information, see [IAM JSON Policy Elements Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#Conditions_IPAddress) in the *IAM User Guide*\. 
 
 ```
  1. {
@@ -192,7 +192,7 @@ This example prevents all users \(including the root user\) from performing all 
 
 ## Granting Permission to an Amazon CloudFront Origin Identity<a name="example-bucket-policies-use-case-6"></a>
 
-The following example bucket policy grants a CloudFront Origin Identity permission to get \(list\) all objects in your Amazon S3 bucket\. The CloudFront Origin Identity is used to enable the CloudFront private content feature\. The policy uses the `CanonicalUser` prefix, instead of AWS, to specify a Canonical User ID\. To learn more about CloudFront support for serving private content, see [Serving Private Content with Signed URLs and Signed Cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the *Amazon CloudFront Developer Guide*\. You must specify the canonical user ID for your CloudFront distribution's origin access identity\. For instructions about finding the canonical user ID, see [Specifying a Principal in a Policy](s3-bucket-user-policy-specifying-principal-intro.md)\.
+The following example bucket policy grants a CloudFront Origin Identity permission to get \(list\) all objects in your Amazon S3 bucket\. The CloudFront Origin Identity is used to enable the CloudFront private content feature\. The policy uses the `CanonicalUser` prefix, instead of AWS, to specify a Canonical User ID\. To learn more about CloudFront support for serving private content, see [Serving Private Content with Signed URLs and Signed Cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the *Amazon CloudFront Developer Guide*\. You must specify the canonical user ID for your CloudFront distribution's origin access identity\. For instructions about finding the canonical user ID, see [Specifying a Principal in a Policy](s3-bucket-user-policy-specifying-principal-intro.mdx)\.
 
 ```
  1. {
@@ -299,7 +299,7 @@ You can optionally use a numeric condition to limit the duration for which the `
 
 ## Granting Cross\-Account Permissions to Upload Objects While Ensuring the Bucket Owner Has Full Control<a name="example-bucket-policies-use-case-8"></a>
 
-You can allow another AWS account to upload objects to your bucket\. However, you might decide that as a bucket owner you must have full control of the objects uploaded to your bucket\. The following policy enforces that a specific AWS account \(`111111111111`\) be denied the ability to upload objects unless that account grants full\-control access to the bucket owner identified by the email address \(`xyz@amazon.com`\)\. The `StringNotEquals` condition in the policy specifies the `s3:x-amz-grant-full-control` condition key to express the requirement \(see [Specifying Conditions in a Policy](amazon-s3-policy-keys.md)\)\. 
+You can allow another AWS account to upload objects to your bucket\. However, you might decide that as a bucket owner you must have full control of the objects uploaded to your bucket\. The following policy enforces that a specific AWS account \(`111111111111`\) be denied the ability to upload objects unless that account grants full\-control access to the bucket owner identified by the email address \(`xyz@amazon.com`\)\. The `StringNotEquals` condition in the policy specifies the `s3:x-amz-grant-full-control` condition key to express the requirement \(see [Specifying Conditions in a Policy](amazon-s3-policy-keys.mdx)\)\. 
 
 ```
  1. {
@@ -328,7 +328,7 @@ You can allow another AWS account to upload objects to your bucket\. However, yo
 
 ## Granting Permissions for Amazon S3 Inventory and Amazon S3 Analytics<a name="example-bucket-policies-use-case-9"></a>
 
-Amazon S3 inventory creates lists of the objects in an Amazon S3 bucket, and Amazon S3 analytics export creates output files of the data used in the analysis\. The bucket that the inventory lists the objects for is called the *source bucket*\. The bucket where the inventory file is written and the bucket where the analytics export file is written is called a *destination bucket*\. You must create a bucket policy for the destination bucket when setting up inventory for an Amazon S3 bucket and when setting up the analytics export\. For more information, see [ Amazon S3 Inventory](storage-inventory.md) and [Amazon S3 Analytics – Storage Class Analysis](analytics-storage-class.md)\.
+Amazon S3 inventory creates lists of the objects in an Amazon S3 bucket, and Amazon S3 analytics export creates output files of the data used in the analysis\. The bucket that the inventory lists the objects for is called the *source bucket*\. The bucket where the inventory file is written and the bucket where the analytics export file is written is called a *destination bucket*\. You must create a bucket policy for the destination bucket when setting up inventory for an Amazon S3 bucket and when setting up the analytics export\. For more information, see [ Amazon S3 Inventory](storage-inventory.mdx) and [Amazon S3 Analytics – Storage Class Analysis](analytics-storage-class.mdx)\.
 
 The following example bucket policy grants Amazon S3 permission to write objects \(PUTs\) from the account for the source bucket to the destination bucket\. You use a bucket policy like this on the destination bucket when setting up Amazon S3 inventory and Amazon S3 analytics export\.
 
