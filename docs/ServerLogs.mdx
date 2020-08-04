@@ -33,7 +33,7 @@ To enable access logging, you must do the following:
 **Note**  
  Amazon S3 only supports granting permission to deliver access logs via bucket ACL, not via bucket policy\.
  Adding *deny* conditions to a bucket policy may prevent Amazon S3 from delivering access logs\.
- [Default bucket encryption](bucket-encryption.html) on the destination bucket *may only be used* if **AES256 \(SSE\-S3\)** is selected\. SSE\-KMS encryption is not supported\. 
+ [Default bucket encryption](bucket-encryption.mdx) on the destination bucket *may only be used* if **AES256 \(SSE\-S3\)** is selected\. SSE\-KMS encryption is not supported\. 
 Amazon S3 object lock cannot be enabled on the log destination bucket\.
 
 To turn on log delivery, you provide the following logging configuration information:
