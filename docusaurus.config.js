@@ -13,7 +13,7 @@ module.exports = {
         alt: "AWS S3 Doc Logo",
         src: "img/logo.svg"
       },
-      links: [
+      items: [
         { to: "docs/Welcome", label: "Docs", position: "left" },
         {
           href: "https://github.com/algolia/aws-docsearch",
