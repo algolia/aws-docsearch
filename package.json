@@ -1,6 +1,7 @@
 {
   "name": "aws-docsearch",
   "version": "0.0.0",
+  "homepage": "https://aws-doc.algolia.com/",
   "private": true,
   "scripts": {
     "start": "docusaurus start",
